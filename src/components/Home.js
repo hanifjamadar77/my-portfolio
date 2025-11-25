@@ -1,6 +1,8 @@
+// HeroProfile.jsx
 import React, { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, Instagram, MapPin, Briefcase, Award, CodeXml, } from 'lucide-react';
+import { Github, Linkedin, Mail, Instagram, MapPin, Briefcase, Award, CodeXml } from 'lucide-react';
 import profile from "../assets/profile.jpg";
+import Navbar from './Navbar';
 
 export default function HeroProfile() {
   const [isVisible, setIsVisible] = useState(false);
@@ -45,12 +47,15 @@ export default function HeroProfile() {
     { icon: Github, href: 'https://github.com/hanifjamadar77', label: 'GitHub' },
     { icon: Linkedin, href: 'https://www.linkedin.com/in/hanif-jamadar/', label: 'LinkedIn' },
     { icon: Mail, href: 'https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=jamadarmhanif@gmail.com', label: 'Email' },
-    {icon:  CodeXml, href:'https://leetcode.com/u/V2KEOBa9pC/', label: 'LeetCode'},
-    { icon: Instagram, href: 'https://www.instagram.com/iamhanif._/', label: 'Instagram' },
+    { icon: CodeXml, href: 'https://leetcode.com/u/V2KEOBa9pC/', label: 'LeetCode' },
+    { icon: Instagram, href: 'https://www.instagram.com/iamhanif._/', label: 'Instagram' }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 relative overflow-hidden">
+      {/* Navbar Component */}
+      <Navbar />
+
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(30)].map((_, i) => (
@@ -72,58 +77,8 @@ export default function HeroProfile() {
       {/* Grid Pattern Overlay */}
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
 
-      {/* Navigation */}
-      <nav className="relative z-10 border-b border-gray-800/50 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <div className="flex justify-between items-center">
-            <div className="text-2xl font-bold">
-              {/* <span className="text-white">Hanif</span> */}
-              <span className="text-blue-400">Hanif</span>
-            </div>
-           <div className="hidden md:flex space-x-8 text-sm">
-            <a href="/" className="text-gray-300 hover:text-blue-400 transition-colors duration-300 relative group">
-              Home
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 group-hover:w-full transition-all duration-300"></span>
-            </a>
-            <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors duration-300 relative group">
-              Projects
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 group-hover:w-full transition-all duration-300"></span>
-            </a>
-            <a href="gallery" className="text-gray-300 hover:text-blue-400 transition-colors duration-300 relative group">
-              Gallery
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 group-hover:w-full transition-all duration-300"></span>
-            </a>
-            <a href="skills" className="text-gray-300 hover:text-blue-400 transition-colors duration-300 relative group">
-              Skills
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 group-hover:w-full transition-all duration-300"></span>
-            </a>
-            <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors duration-300 relative group">
-              Certifications
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 group-hover:w-full transition-all duration-300"></span>
-            </a>
-            <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors duration-300 relative group">
-              Blog
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 group-hover:w-full transition-all duration-300"></span>
-            </a>
-            <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors duration-300 relative group">
-              Resume
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 group-hover:w-full transition-all duration-300"></span>
-            </a>
-            <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors duration-300 relative group">
-              About Me
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 group-hover:w-full transition-all duration-300"></span>
-            </a>
-            <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors duration-300 relative group">
-              Contact
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 group-hover:w-full transition-all duration-300"></span>
-            </a>
-          </div>
-          </div>
-        </div>
-      </nav>
-
-      {/* Main Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-6 py-20">
+      {/* Main Content - Added pt-20 for navbar spacing */}
+      <div className="relative z-10 max-w-6xl mx-auto px-6 py-20 pt-32">
         <div className={`flex flex-col md:flex-row items-center gap-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           
           {/* Profile Image */}
@@ -157,7 +112,7 @@ export default function HeroProfile() {
                 {badges.map((badge, idx) => (
                   <span
                     key={idx}
-                    className={`px-4 py-1.5 bg-${badge.variant}-500/20 border border-${badge.variant}-500/30 text-${badge.variant}-400 rounded-full text-sm font-medium hover:bg-${badge.variant}-500/30 transition-all duration-300 transform hover:scale-105`}
+                    className="px-4 py-1.5 bg-blue-500/20 border border-blue-500/30 text-blue-400 rounded-full text-sm font-medium hover:bg-blue-500/30 transition-all duration-300 transform hover:scale-105"
                     style={{
                       animationDelay: `${idx * 0.1}s`
                     }}
@@ -171,7 +126,7 @@ export default function HeroProfile() {
                 {roles.map((role, idx) => (
                   <span
                     key={idx}
-                    className={`px-4 py-1.5 bg-${role.variant}-500/20 border border-${role.variant}-500/30 text-${role.variant}-400 rounded-full text-sm font-medium hover:bg-${role.variant}-500/30 transition-all duration-300 transform hover:scale-105`}
+                    className="px-4 py-1.5 bg-blue-500/20 border border-blue-500/30 text-blue-400 rounded-full text-sm font-medium hover:bg-blue-500/30 transition-all duration-300 transform hover:scale-105"
                   >
                     {role.label}
                   </span>
@@ -209,6 +164,8 @@ export default function HeroProfile() {
                     <a
                       key={idx}
                       href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="w-12 h-12 bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-lg flex items-center justify-center text-gray-400 hover:text-blue-400 hover:border-blue-500/50 hover:bg-gray-800 transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/20"
                       aria-label={social.label}
                     >
