@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route, Link, Outlet } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link, Outlet, HashRouter } from 'react-router-dom';
 import Home from "./components/Home";
 import Gallery from "./components/Gallery";
 import Skills from "./components/Skills";
@@ -8,7 +8,7 @@ import Projects from "./components/Projects";
 function App() {
   return (
     <>
-     <BrowserRouter>
+     <HashRouter>
       {/* Routes */}
       <Routes>
         <Route path="/" element={<Home />} />
@@ -22,7 +22,7 @@ function App() {
         <Route path="skills" element={<Skills />} />
         
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
     </>
   );
 }
