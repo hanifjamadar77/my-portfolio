@@ -60,8 +60,8 @@ export default function SkillsPage() {
       delay: 4.5 
     },
     { 
-      name: 'PyTorch', 
-      image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg',
+      name: 'GitHub', 
+      image: 'https://imgs.search.brave.com/cv9MOw1ZUWuM5XkrwxWQGHA7yOOy8HRxgK8shPjqr8c/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuc2Vla2xvZ28u/Y29tL2xvZ28tcG5n/LzQ4LzIvZ2l0aHVi/LWxvZ28tcG5nX3Nl/ZWtsb2dvLTQ4MDQ1/MC5wbmc',
       delay: 5 
     },
     { 
@@ -74,7 +74,7 @@ export default function SkillsPage() {
   const skillCategories = [
     {
       title: 'Programming Languages',
-      skills: ['Java','Python', 'C', 'C++', ]
+      skills: ['Java','Python', 'C', 'C++']
     },
     {
       title: 'Web Technologies',
@@ -86,7 +86,7 @@ export default function SkillsPage() {
     },
     {
       title: 'Frameworks & Libraries',
-      skills: ['React','React Native','TensorFlow', 'PyTorch', 'Sklearn']
+      skills: ['React JS','React Native', 'Tailwind CSS','TensorFlow']
     },
     {
       title: 'Core Concepts',

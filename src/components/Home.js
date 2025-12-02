@@ -40,7 +40,7 @@ export default function HeroProfile() {
   const stats = [
     { icon: MapPin, label: 'Location', value: 'Wagholi, Pune' },
     { icon: Briefcase, label: 'Expertise', value: 'Mobile App Developer' },
-    { icon: Award, label: 'Certifications', value: 'Google/AWS/Azure' }
+    // { icon: Award, label: 'Certifications', value: 'Google/AWS/Azure' }
   ];
 
   const socialLinks = [

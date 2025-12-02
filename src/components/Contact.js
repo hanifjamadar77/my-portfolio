@@ -30,13 +30,13 @@ export default function ContactPage() {
     {
       icon: Phone,
       title: 'Phone',
-      value: '+91 9876543210',
+      value: '+91 8485037484',
       link: 'tel:+919876543210'
     },
     {
       icon: MapPin,
       title: 'Location',
-      value: 'Pimpri, Maharashtra, IN',
+      value: 'Wagholi, Pune, India',
       link: '#'
     }
   ];
@@ -45,9 +45,7 @@ export default function ContactPage() {
     { icon: Github, href: 'https://github.com/hanifjamadar77', label: 'GitHub' },
     { icon: Linkedin, href: 'https://www.linkedin.com/in/hanif-jamadar/', label: 'LinkedIn' },
     { icon: Mail, href: 'mailto:jamadarmhanif@gmail.com', label: 'Email' },
-    { icon: MessageSquare, href: '#', label: 'WhatsApp' },
     { icon: Instagram, href: 'https://www.instagram.com/iamhanif._/', label: 'Instagram' },
-    { icon: Facebook, href: '#', label: 'Facebook' }
   ];
 
   return (
@@ -106,10 +104,10 @@ export default function ContactPage() {
           </div>
 
           {/* Contact Form */}
-          <div className="p-8 pt-4">
-            <div className="space-y-4">
+          {/* <div className="p-8 pt-4">
+            <div className="space-y-4"> */}
               {/* Name Input */}
-              <div>
+              {/* <div>
                 <label className="block text-gray-400 text-sm mb-2">Your Name</label>
                 <input
                   type="text"
@@ -118,10 +116,10 @@ export default function ContactPage() {
                   onChange={(e) => setFormData({...formData, name: e.target.value})}
                   className="w-full px-4 py-3 bg-slate-800/50 border border-gray-700/50 rounded-lg text-white placeholder-gray-500 focus:border-blue-500/50 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
                 />
-              </div>
+              </div> */}
 
               {/* Email Input */}
-              <div>
+              {/* <div>
                 <label className="block text-gray-400 text-sm mb-2">Your Email</label>
                 <input
                   type="email"
@@ -130,10 +128,10 @@ export default function ContactPage() {
                   onChange={(e) => setFormData({...formData, email: e.target.value})}
                   className="w-full px-4 py-3 bg-slate-800/50 border border-gray-700/50 rounded-lg text-white placeholder-gray-500 focus:border-blue-500/50 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
                 />
-              </div>
+              </div> */}
 
               {/* Message Input */}
-              <div>
+              {/* <div>
                 <label className="block text-gray-400 text-sm mb-2">Your Message</label>
                 <textarea
                   placeholder="Tell me about your project or just say hi..."
@@ -142,19 +140,19 @@ export default function ContactPage() {
                   rows="5"
                   className="w-full px-4 py-3 bg-slate-800/50 border border-gray-700/50 rounded-lg text-white placeholder-gray-500 focus:border-blue-500/50 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all duration-300 resize-none"
                 ></textarea>
-              </div>
+              </div> */}
 
               {/* Submit Button */}
-              <button
+              {/* <button
                 onClick={handleSubmit}
                 className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white py-3 px-6 rounded-lg font-medium hover:shadow-lg hover:shadow-blue-500/50 transform hover:scale-[1.02] transition-all duration-300 flex items-center justify-center gap-2 group"
               >
                 <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 Send Message
-              </button>
+              </button> */}
 
               {/* Status Message */}
-              {status && (
+              {/* {status && (
                 <div className={`text-center py-2 px-4 rounded-lg ${
                   status.includes('successfully') 
                     ? 'bg-green-500/20 border border-green-500/30 text-green-400' 
@@ -162,9 +160,9 @@ export default function ContactPage() {
                 }`}>
                   {status}
                 </div>
-              )}
-            </div>
-          </div>
+              )} */}
+            {/* </div>
+          </div> */}
 
           {/* Contact Info Footer */}
           <div className="bg-slate-950/50 border-t border-gray-800/50 p-8">

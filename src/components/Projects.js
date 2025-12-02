@@ -6,13 +6,14 @@ import blink from '../assets/blink.png';
 import stock from '../assets/stock.png';
 import aero from '../assets/aero.png';
 import movieFlix from '../assets/movieFlix.jpg'; 
+import textUtils from '../assets/textutils.png'
 
 export default function ProjectsPage() {
   const [filter, setFilter] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
   const [hoveredProject, setHoveredProject] = useState(null);
 
-  const categories = ['All', 'AI/ML', 'Web Development', 'Mobile App'];
+  const categories = ['All', 'Mobile App',  'AI/ML', 'Web Development', ];
 
   const projects = [
     {
@@ -84,36 +85,14 @@ export default function ProjectsPage() {
     {
       id: 7,
       title: 'TextUtils - React App',
-      description: 'Real-time social media sentiment analysis and engagement tracking platform with data visualization.',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
-      tags: ['React', 'D3.js', 'Python', 'NLP'],
-      category: 'Data Science',
-      demoLink: '#',
-      githubLink: '#',
+      description: 'This is a TextUtils website, Used for text Uppercase, Lowercase, SentanceCase, Removing Extraspaces, counting number of words and charactors etc.',
+      image: textUtils,
+      tags: ['React', 'JavaScript', 'CSS', 'HTML'],
+      category: 'Web Development',
+      demoLink: 'https://hanifjamadar77.github.io/TextUtils-React-App/',
+      githubLink: 'https://github.com/hanifjamadar77/TextUtils-React-App',
       featured: false
     },
-    {
-      id: 8,
-      title: 'Fitness Tracking App',
-      description: 'Mobile application for tracking workouts, nutrition, and health metrics with personalized recommendations.',
-      image: 'https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=600&h=400&fit=crop',
-      tags: ['React Native', 'Firebase', 'Redux', 'APIs'],
-      category: 'Mobile App',
-      demoLink: '#',
-      githubLink: '#',
-      featured: false
-    },
-    {
-      id: 9,
-      title: 'Neural Style Transfer',
-      description: 'Deep learning application that applies artistic styles to images using convolutional neural networks.',
-      image: 'https://images.unsplash.com/photo-1561214078-f3247647fc5e?w=600&h=400&fit=crop',
-      tags: ['TensorFlow', 'CNN', 'Python', 'Deep Learning'],
-      category: 'AI/ML',
-      demoLink: '#',
-      githubLink: '#',
-      featured: true
-    }
   ];
 
   const filteredProjects = projects.filter(pro => {
@@ -283,7 +262,7 @@ export default function ProjectsPage() {
               I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
             </p>
             <a
-              href="#contact"
+              href="contact"
               className="inline-block bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-full font-medium hover:shadow-lg hover:shadow-blue-500/50 transform hover:scale-105 transition-all duration-300"
             >
               Get In Touch

@@ -1,6 +1,19 @@
-import React, { useState } from 'react';
-import { FileText, Download, Mail, Phone, MapPin, Linkedin, Github, Award, Briefcase, GraduationCap, Code, ExternalLink } from 'lucide-react';
-import resume from "../assets/Resume.pdf"
+import React, { useState } from "react";
+import {
+  FileText,
+  Download,
+  Mail,
+  Phone,
+  MapPin,
+  Linkedin,
+  Github,
+  Award,
+  Briefcase,
+  GraduationCap,
+  Code,
+  ExternalLink,
+} from "lucide-react";
+import resume from "../assets/Resume.pdf";
 
 export default function ResumePage() {
   const [showPreview, setShowPreview] = useState(false);
@@ -14,82 +27,105 @@ export default function ResumePage() {
     phone: "+91 8485037484",
     linkedin: "linkedin.com/in/hanif-jamadar",
     github: "github.com/hanifjamadar77",
-    summary: "Quick summary below and full resume preview with download option.",
-    
-    projects: [
-      {
-        title: "Smart Cancer Detection from Histopathology using YOLO & CNN",
-        description: "Developed a cancer detection system using deep learning techniques with YOLO and CNN architectures for accurate histopathological image analysis.",
-        technologies: ["Python", "TensorFlow", "YOLO", "CNN"]
-      },
-      {
-        title: "Mental Health Analysis using NLP and BERT",
-        description: "Built an NLP-based mental health analysis tool using BERT for sentiment analysis and emotion detection from text data.",
-        technologies: ["Python", "BERT", "NLP", "PyTorch"]
-      },
-      {
-        title: "Indian Sign Language Interpreter AI Program",
-        description: "Created an AI-powered interpreter for Indian Sign Language using computer vision and deep learning for real-time gesture recognition.",
-        technologies: ["OpenCV", "TensorFlow", "Python", "CNN"]
-      },
-      {
-        title: "Generative Content-Gen AI and Summarization ChatBot based on GenAI",
-        description: "Developed a generative AI chatbot capable of content generation and text summarization using advanced language models.",
-        technologies: ["GPT", "LangChain", "Python", "API"]
-      }
-    ],
+    summary:
+      "Quick summary below and full resume preview with download option.",
 
-    experience: [
+    // projects: [
+    //   {
+    //     title: "Smart Cancer Detection from Histopathology using YOLO & CNN",
+    //     description: "Developed a cancer detection system using deep learning techniques with YOLO and CNN architectures for accurate histopathological image analysis.",
+    //     technologies: ["Python", "TensorFlow", "YOLO", "CNN"]
+    //   },
+    //   {
+    //     title: "Mental Health Analysis using NLP and BERT",
+    //     description: "Built an NLP-based mental health analysis tool using BERT for sentiment analysis and emotion detection from text data.",
+    //     technologies: ["Python", "BERT", "NLP", "PyTorch"]
+    //   },
+    //   {
+    //     title: "Indian Sign Language Interpreter AI Program",
+    //     description: "Created an AI-powered interpreter for Indian Sign Language using computer vision and deep learning for real-time gesture recognition.",
+    //     technologies: ["OpenCV", "TensorFlow", "Python", "CNN"]
+    //   },
+    //   {
+    //     title: "Generative Content-Gen AI and Summarization ChatBot based on GenAI",
+    //     description: "Developed a generative AI chatbot capable of content generation and text summarization using advanced language models.",
+    //     technologies: ["GPT", "LangChain", "Python", "API"]
+    //   }
+    // ],
+
+    // experience: [
+    //   {
+    //     title: "AI/ML Engineer",
+    //     company: "Tech Solutions Inc",
+    //     period: "2023 - Present",
+    //     description: "Building and deploying machine learning models for production environments.",
+    //     responsibilities: [
+    //       "Developed end-to-end ML pipelines",
+    //       "Implemented computer vision solutions",
+    //       "Optimized model performance and scalability"
+    //     ]
+    //   },
+    //   {
+    //     title: "Machine Learning Intern",
+    //     company: "Innovation Labs",
+    //     period: "2022 - 2023",
+    //     description: "Worked on NLP and computer vision projects.",
+    //     responsibilities: [
+    //       "Trained deep learning models",
+    //       "Conducted research on state-of-the-art techniques",
+    //       "Collaborated with cross-functional teams"
+    //     ]
+    //   }
+    // ],
+
+    education: [
       {
-        title: "AI/ML Engineer",
-        company: "Tech Solutions Inc",
-        period: "2023 - Present",
-        description: "Building and deploying machine learning models for production environments.",
-        responsibilities: [
-          "Developed end-to-end ML pipelines",
-          "Implemented computer vision solutions",
-          "Optimized model performance and scalability"
-        ]
+        degree: "B.Tech in Computer Engineering",
+        institution: "G H Raisoni College of Engineering and Management, Pune",
+        period: "2023 - 2026",
+        cgpa: "77.8 (8.53 cgpa)",
+        achievements: [
+          "Smart India Hackathon certificate at college level.",
+          "Hacktoberfest Jam (Microsoft Learn Student Ambassador Club).",
+          'Certificate for the Completion of Advanced Python Training (IIT Bombay).',
+        ],
       },
       {
-        title: "Machine Learning Intern",
-        company: "Innovation Labs",
-        period: "2022 - 2023",
-        description: "Worked on NLP and computer vision projects.",
-        responsibilities: [
-          "Trained deep learning models",
-          "Conducted research on state-of-the-art techniques",
-          "Collaborated with cross-functional teams"
-        ]
-      }
-    ],
+        degree: "Diploma in Computer Science and Engineering",
+        institution: "Maharashtra State Board of Technical Education, Mumbai",
+        period: "2021 - 2023",
+        cgpa: "87.20",
+        achievements: [
+          "First Rank – Diploma in Computer Science",
+          "3rd Rank – State Level Technical Paper Presentation",
+        ],
+      },
 
-    education: {
-      degree: "B.Tech in Computer Engineering",
-      institution: "Gujarat Technological University",
-      period: "2019 - 2023",
-      cgpa: "9.2/10",
-      achievements: [
-        "Gold Medalist in GTEC-2021 (Hackathon)",
-        "Published research paper on AI ethics",
-        "Head of Tech Club"
-      ]
-    },
+      {
+        degree: " Shri Shivachaleshwar High School & JR.College , Maindargi Dist. Solapur. ",
+        institution: "Maharashtra State Board of Secondary & Higher Education, Pune ",
+        period: "2020",
+        cgpa: "92.60",
+        achievements: [
+          "First Rank in Class 10",
+        ],
+      },
+    ],
 
     skills: {
-      "Programming": ["Python", "C++", "Java", "JavaScript"],
+      Programming: ["Python", "C++", "Java", "JavaScript"],
       "AI/ML": ["TensorFlow", "PyTorch", "Scikit-learn", "Keras"],
-      "Web": ["React", "Node.js", "Flask", "Django"],
-      "Database": ["MongoDB", "MySQL", "PostgreSQL"],
-      "Tools": ["Git", "Docker", "AWS", "Jupyter"]
+      Web: ["React", "Node.js", "Flask", "Django"],
+      Database: ["MongoDB", "MySQL", "PostgreSQL"],
+      Tools: ["Git", "Docker", "AWS", "Jupyter"],
     },
 
     achievements: [
       "1st Place - GDSC Solution Challenge 2023",
       "Winner - Smart India Hackathon 2022",
       "Published 2 research papers in AI conferences",
-      "Contributed to 5+ open source projects"
-    ]
+      "Contributed to 5+ open source projects",
+    ],
   };
 
   return (
@@ -104,7 +140,9 @@ export default function ResumePage() {
             {resumeData.name}
           </h1>
           <p className="text-2xl text-gray-400 mb-6">{resumeData.title}</p>
-          <p className="text-gray-500 max-w-2xl mx-auto mb-8">{resumeData.summary}</p>
+          <p className="text-gray-500 max-w-2xl mx-auto mb-8">
+            {resumeData.summary}
+          </p>
 
           {/* Contact Info */}
           <div className="flex flex-wrap justify-center gap-6 mb-8">
@@ -129,7 +167,7 @@ export default function ResumePage() {
               className="flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-full font-medium hover:shadow-lg hover:shadow-blue-500/50 transform hover:scale-105 transition-all duration-300"
             >
               <FileText className="w-5 h-5" />
-              {showPreview ? 'Hide Preview' : 'View Resume'}
+              {showPreview ? "Hide Preview" : "View Resume"}
             </button>
             <a
               href={resume}
@@ -147,7 +185,7 @@ export default function ResumePage() {
           {/* Left Column */}
           <div className="lg:col-span-2 space-y-8">
             {/* Projects Section */}
-            <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-8">
+            {/* <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-8">
               <div className="flex items-center gap-3 mb-6">
                 <Code className="w-6 h-6 text-blue-400" />
                 <h2 className="text-3xl font-bold text-white">Projects & Experience</h2>
@@ -167,7 +205,7 @@ export default function ResumePage() {
                   </div>
                 ))}
               </div>
-            </div>
+            </div> */}
 
             {/* Experience Section */}
             {/* <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-8">
@@ -201,19 +239,32 @@ export default function ResumePage() {
                 <GraduationCap className="w-6 h-6 text-blue-400" />
                 <h2 className="text-3xl font-bold text-white">Education</h2>
               </div>
-              <div className="border-l-2 border-green-500 pl-6">
-                <h3 className="text-xl font-bold text-white">{resumeData.education.degree}</h3>
-                <p className="text-blue-400 mb-2">{resumeData.education.institution}</p>
-                <p className="text-gray-500 text-sm mb-3">{resumeData.education.period}</p>
-                <p className="text-gray-400 mb-3">CGPA: <span className="text-white font-bold">{resumeData.education.cgpa}</span></p>
-                <ul className="space-y-2">
-                  {resumeData.education.achievements.map((achievement, i) => (
-                    <li key={i} className="text-gray-300 flex items-start">
-                      <span className="text-green-400 mr-2">•</span>
-                      {achievement}
-                    </li>
-                  ))}
-                </ul>
+
+              <div className="space-y-6">
+                {resumeData.education.map((edu, idx) => (
+                  <div
+                    key={idx}
+                    className="border-l-2 border-green-500 pl-6 pb-6 last:pb-0"
+                  >
+                    <h3 className="text-xl font-bold text-white">
+                      {edu.degree}
+                    </h3>
+                    <p className="text-blue-400 mb-2">{edu.institution}</p>
+                    <p className="text-gray-500 text-sm mb-3">{edu.period}</p>
+                    <p className="text-gray-400 mb-3">
+                      Percentage:{" "}
+                      <span className="text-white font-bold">{edu.cgpa}</span>
+                    </p>
+                    <ul className="space-y-2">
+                      {edu.achievements.map((achievement, i) => (
+                        <li key={i} className="text-gray-300 flex items-start">
+                          <span className="text-green-400 mr-2">•</span>
+                          {achievement}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -221,7 +272,7 @@ export default function ResumePage() {
           {/* Right Column - Sidebar */}
           <div className="space-y-8">
             {/* Skills Section */}
-            <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 sticky top-6">
+            {/* <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 sticky top-6">
               <div className="flex items-center gap-3 mb-6">
                 <Award className="w-6 h-6 text-blue-400" />
                 <h2 className="text-2xl font-bold text-white">Key Skills</h2>
@@ -240,10 +291,10 @@ export default function ResumePage() {
                   </div>
                 ))}
               </div>
-            </div>
+            </div> */}
 
             {/* Achievements Section */}
-            <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6">
+            {/* <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6">
               <div className="flex items-center gap-3 mb-6">
                 <Award className="w-6 h-6 text-blue-400" />
                 <h2 className="text-2xl font-bold text-white">Achievements</h2>
@@ -256,17 +307,23 @@ export default function ResumePage() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </div> */}
 
             {/* Social Links */}
             <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6">
               <h2 className="text-xl font-bold text-white mb-4">Connect</h2>
               <div className="space-y-3">
-                <a href="#" className="flex items-center gap-3 text-gray-300 hover:text-blue-400 transition-colors">
+                <a
+                  href="#"
+                  className="flex items-center gap-3 text-gray-300 hover:text-blue-400 transition-colors"
+                >
                   <Linkedin className="w-5 h-5" />
                   <span className="text-sm">{resumeData.linkedin}</span>
                 </a>
-                <a href="#" className="flex items-center gap-3 text-gray-300 hover:text-blue-400 transition-colors">
+                <a
+                  href="#"
+                  className="flex items-center gap-3 text-gray-300 hover:text-blue-400 transition-colors"
+                >
                   <Github className="w-5 h-5" />
                   <span className="text-sm">{resumeData.github}</span>
                 </a>
@@ -287,7 +344,7 @@ export default function ResumePage() {
                 ✕
               </button>
             </div>
-            
+
             {/* Resume Preview Frame */}
             <div className="bg-white rounded-lg overflow-hidden shadow-2xl">
               <div className="bg-gray-100 flex items-center justify-center relative">
@@ -297,9 +354,9 @@ export default function ResumePage() {
                   alt="Resume Preview"
                   className="w-full h-auto max-h-[1000px] object-contain"
                 /> */}
-                
+
                 {/* Method 2: Embedded PDF (Alternative) */}
-                <iframe 
+                <iframe
                   src={resume}
                   className="w-full h-[1000px] border-0"
                   title="Resume Preview"

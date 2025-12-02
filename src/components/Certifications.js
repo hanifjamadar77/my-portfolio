@@ -117,7 +117,7 @@ export default function CertificationsPage() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
         {/* Header */}
-        <div className="text-center mb-12">
+        {/* <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-blue-500/20 border border-blue-500/30 px-4 py-2 rounded-full mb-4">
             <Award className="w-5 h-5 text-blue-400" />
             <span className="text-blue-400 font-medium">Certifications</span>
@@ -128,12 +128,12 @@ export default function CertificationsPage() {
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
             Organized by Tech and Others
           </p>
-        </div>
+        </div> */}
 
         {/* Filters and Search */}
         <div className="flex flex-col md:flex-row gap-4 mb-12">
           {/* Category Filters */}
-          <div className="flex flex-wrap gap-2 flex-1">
+          {/* <div className="flex flex-wrap gap-2 flex-1">
             {categories.map((category) => (
               <button
                 key={category}
@@ -147,10 +147,10 @@ export default function CertificationsPage() {
                 {category}
               </button>
             ))}
-          </div>
+          </div> */}
 
           {/* Search Bar */}
-          <div className="relative">
+          {/* <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
             <input
               type="text"
@@ -159,7 +159,7 @@ export default function CertificationsPage() {
               onChange={(e) => setSearchTerm(e.target.value)}
               className="pl-10 pr-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-blue-500/50 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all duration-300 w-full md:w-64"
             />
-          </div>
+          </div> */}
         </div>
 
         {/* Certifications Grid */}
@@ -171,15 +171,15 @@ export default function CertificationsPage() {
             >
               {/* Certificate Image */}
               <div className="relative h-48 overflow-hidden bg-gray-800">
-                <img
+                {/* <img
                   src={cert.image}
                   alt={cert.title}
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent"></div>
-                
+                /> */}
+                {/* <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent"></div>
+                 */}
                 {/* Category Badge */}
-                <div className="absolute top-4 right-4 flex flex-wrap gap-2 justify-end">
+                {/* <div className="absolute top-4 right-4 flex flex-wrap gap-2 justify-end">
                   {Array.isArray(cert.category) ? (
                     cert.category.map((cat, i) => (
                       <span key={i} className="px-3 py-1 bg-blue-500/20 backdrop-blur-sm border border-blue-500/30 text-blue-400 rounded-full text-xs font-medium">
@@ -191,22 +191,22 @@ export default function CertificationsPage() {
                       {cert.category}
                     </span>
                   )}
-                </div>
+                </div> */}
               </div>
 
               {/* Certificate Info */}
               <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
+                {/* <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
                   {cert.title}
                 </h3>
-                <p className="text-gray-400 text-sm mb-3">{cert.issuer}</p>
-                
+                <p className="text-gray-400 text-sm mb-3">{cert.issuer}</p> */}
+{/*                 
                 <div className="flex items-center gap-2 text-gray-500 text-sm mb-4">
                   <Calendar className="w-4 h-4" />
                   <span>{cert.date}</span>
-                </div>
+                </div> */}
 
-                {/* View Button */}
+                {/* View Button
                 <a
                   href={cert.certificateUrl}
                   target="_blank"
@@ -215,7 +215,7 @@ export default function CertificationsPage() {
                 >
                   View
                   <ExternalLink className="w-4 h-4" />
-                </a>
+                </a> */}
               </div>
             </div>
           ))}
@@ -230,7 +230,7 @@ export default function CertificationsPage() {
         )}
 
         {/* Stats Section */}
-        <div className="mt-16 grid md:grid-cols-4 gap-6">
+        {/* <div className="mt-16 grid md:grid-cols-4 gap-6">
           <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300">
             <div className="text-4xl font-bold text-blue-400 mb-2">{certifications.length}+</div>
             <div className="text-gray-400 text-sm">Total Certifications</div>
@@ -247,7 +247,7 @@ export default function CertificationsPage() {
             <div className="text-4xl font-bold text-green-400 mb-2">100%</div>
             <div className="text-gray-400 text-sm">Completion Rate</div>
           </div>
-        </div>
+        </div> */}
       </div>
 
       <style>{`
