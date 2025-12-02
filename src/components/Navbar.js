@@ -17,10 +17,10 @@ export default function Navbar() {
   const navItems = [
     { name: 'Home', path: '/' },
     { name: 'Projects', path: '/projects' },
-    { name: 'Gallery', path: '/gallery' },
+    // { name: 'Gallery', path: '/gallery' },
     { name: 'Skills', path: '/skills' },
-    { name: 'Certifications', path: '/certifications' },
-    { name: 'Blog', path: '/blog' },
+    { name: 'Certifications', path: '/certificate' },
+    // { name: 'Blog', path: '/blog' },
     { name: 'Resume', path: '/resume' },
     { name: 'About Me', path: '/about' },
     { name: 'Contact', path: '/contact' }

@@ -74,19 +74,19 @@ export default function SkillsPage() {
   const skillCategories = [
     {
       title: 'Programming Languages',
-      skills: ['Python', 'C', 'C++', 'Java']
+      skills: ['Java','Python', 'C', 'C++', ]
     },
     {
       title: 'Web Technologies',
-      skills: ['HTML', 'CSS', 'JavaScript', 'React']
+      skills: ['HTML', 'CSS', 'JavaScript',  ]
     },
     {
       title: 'Databases & Tools',
-      skills: ['MySQL', 'MongoDB', 'Git']
+      skills: ['MySQL', 'MongoDB', 'GitHub', 'Firebase','Appwrite',]
     },
     {
       title: 'Frameworks & Libraries',
-      skills: ['TensorFlow', 'PyTorch', 'Sklearn']
+      skills: ['React','React Native','TensorFlow', 'PyTorch', 'Sklearn']
     },
     {
       title: 'Core Concepts',
@@ -95,13 +95,15 @@ export default function SkillsPage() {
         'Machine Learning',
         'Deep Learning',
         'Object-Oriented Programming',
-        'Explainable AI (XAI)'
+        'Network Security',
+        'Test-Driven Development'
       ]
     },
     {
       title: 'Soft Skills',
       skills: [
         'Teamwork',
+        'Project Management',
         'Problem Solving',
         'Adaptability',
         'Communication'
@@ -115,7 +117,7 @@ export default function SkillsPage() {
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
 
       {/* Floating Skills Animation Section */}
-      <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <div className="relative h-[80vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           {floatingSkills.map((skill, idx) => (
             <div

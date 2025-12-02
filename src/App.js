@@ -8,11 +8,12 @@ import Projects from "./components/Projects";
 import Resume from "./components/Resume";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import Certificate from "./components/Certifications";
 
 function App() {
   return (
     <>
-     <BrowserRouter basename="/my-portfolio"> 
+     <BrowserRouter> 
      <Header/>
       {/* Routes */}
       <Routes>
@@ -23,7 +24,7 @@ function App() {
         <Route path="resume" element={<Resume />} />
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
-        <Route path="skills" element={<Skills />} />
+        <Route path="certificate" element={<Certificate />} />
         <Route path="skills" element={<Skills />} />  
       </Routes>
     </BrowserRouter>

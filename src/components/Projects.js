@@ -1,82 +1,89 @@
 import React, { useState } from 'react';
-import { ExternalLink, Github, Play, Filter } from 'lucide-react';
+import { ExternalLink, Github} from 'lucide-react';
+import workly from '../assets/Workly.jpg';
+import fastFood from '../assets/food.png';
+import blink from '../assets/blink.png';
+import stock from '../assets/stock.png';
+import aero from '../assets/aero.png';
+import movieFlix from '../assets/movieFlix.jpg'; 
 
 export default function ProjectsPage() {
   const [filter, setFilter] = useState('All');
+  const [searchTerm, setSearchTerm] = useState('');
   const [hoveredProject, setHoveredProject] = useState(null);
 
-  const categories = ['All', 'AI/ML', 'Web Development', 'Mobile App', 'Data Science', 'Cloud'];
+  const categories = ['All', 'AI/ML', 'Web Development', 'Mobile App'];
 
   const projects = [
     {
       id: 1,
-      title: 'AI Homeopathy Management',
-      description: 'Utilized Llama 3 256k LLM model for long-context analysis and integrated with Pinecone vector database for efficient similarity search.',
-      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop',
-      tags: ['Python', 'Llama', 'Pinecone', 'AI'],
-      category: 'AI/ML',
-      demoLink: '#',
-      githubLink: '#',
+      title: 'Workly: AI Powered Platform For Hyper Local Micro Job Finding',
+      description: 'A comprehensive mobile application connecting blue-collar workers with job opportunities in their local area. Built with React Native and Expo.',
+      image: workly,
+      tags: ['React Native', 'Tailwind CSS', 'Typescript', 'ML', 'AI', 'Gio Location'],
+      category: ['Mobile App','AI/ML'],
+      demoLink: 'https://hanifjamadar77.github.io/workly-APK/',
+      githubLink: 'https://github.com/hanifjamadar77/Workly-AI-Powered-Platform-for-Hyper-Local-Micro-Job-Finding-',
       featured: true
     },
     {
       id: 2,
-      title: 'Indian Sign Language Recognition',
-      description: 'Real-time Indian sign language recognition and translation system using Machine Learning. Developed with advanced ML algorithms for accurate gesture detection.',
-      image: 'https://images.unsplash.com/photo-1535378917042-10a22c95931a?w=600&h=400&fit=crop',
-      tags: ['TensorFlow', 'Computer Vision', 'Python', 'ML'],
-      category: 'AI/ML',
-      demoLink: '#',
-      githubLink: '#',
+      title: 'Fast Food App',
+      description: 'A modern, full-stack mobile application for food ordering built with React Native (Expo) and powered by Appwrite. This app provides users with seamless browsing of menu items, customizable orders, cart management, and secure authentication — all in one place.',
+      image: fastFood,
+      tags: ['React Native', 'Tailwind CSS','Expo', 'Content Filtering'],
+      category: ['Mobile App'],
+      demoLink: 'https://expo.dev/accounts/hanif_jamadar/projects/Food_Delivery_App',
+      githubLink: 'https://github.com/hanifjamadar77/Fast-Food-App',
       featured: false
     },
     {
       id: 3,
-      title: 'Annotate AI - General AI Chatbot',
-      description: 'An advanced AI-powered chatbot using GPT and Natural Language Processing for intelligent conversations and assistance.',
-      image: 'https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=600&h=400&fit=crop',
-      tags: ['React', 'OpenAI', 'Node.js', 'GPT'],
-      category: 'AI/ML',
-      demoLink: '#',
-      githubLink: '#',
+      title: 'BlinkType-Assist ',
+      description: 'BlinkType Assist is an assistive typing app for individuals with motor impairments. Using Python, OpenCV, and dlib, it enables hands-free interaction with a virtual keyboard through eye gaze navigation and blinking gestures for text input. Designed to enhance communication and digital interaction.',
+      image: blink,
+      tags: ['Python', 'OpenCV', 'dlib', 'Facial Landmark Predictor'],
+      category: ['AI/ML'],
+      demoLink: 'https://github.com/hanifjamadar77/BlinkType-Assist',
+      githubLink: 'https://github.com/hanifjamadar77/BlinkType-Assist',
       featured: true
     },
     {
       id: 4,
-      title: 'E-Commerce Platform',
-      description: 'Full-stack e-commerce solution with payment integration, inventory management, and real-time analytics dashboard.',
-      image: 'https://images.unsplash.com/photo-1557821552-17105176677c?w=600&h=400&fit=crop',
-      tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      category: 'Web Development',
-      demoLink: '#',
-      githubLink: '#',
-      featured: false
+      title: 'Stock Price Prediction Using Machine Learning In Python',
+      description: 'This project is a Stock Price Prediction Website built with Python. It uses Streamlit to provide a simple and interactive web interface, and a Machine Learning model implemented in TensorFlow to predict future stock prices based on historical data.',
+      image: stock,
+      tags: ['Python', 'Streamlit', 'TensorFlow', 'Pandas', 'NumPy', 'Matplotlib'],
+      category: ['Web Development','AI/ML'],
+      demoLink: 'https://github.com/hanifjamadar77/Stock-Price-Prediction',
+      githubLink: 'https://github.com/hanifjamadar77/Stock-Price-Prediction',
+      featured: true
     },
     {
       id: 5,
-      title: 'Weather Prediction Model',
-      description: 'Machine learning model for accurate weather forecasting using historical data and advanced predictive algorithms.',
-      image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop',
-      tags: ['Python', 'Scikit-learn', 'Pandas', 'ML'],
-      category: 'Data Science',
-      demoLink: '#',
-      githubLink: '#',
+      title: 'Aero - The Weather App',
+      description: 'A weather application that provides real-time weather updates for any location. Built with HTML/CSS/JavaScript, the app features a clean, user-friendly interface and displays current weather conditions, temperature, humidity, wind speed. ',
+      image: aero,
+      tags: ['HTML', 'CSS', 'JavaScript', 'Weather APIs'],
+      category: 'Web Development',
+      demoLink: 'https://github.com/hanifjamadar77/Aero---The-Weather-App-',
+      githubLink: 'https://github.com/hanifjamadar77/Aero---The-Weather-App-',
       featured: false
     },
     {
       id: 6,
-      title: 'Cloud Infrastructure Manager',
-      description: 'Automated cloud resource management system with cost optimization and performance monitoring capabilities.',
-      image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=400&fit=crop',
-      tags: ['AWS', 'Docker', 'Kubernetes', 'Terraform'],
-      category: 'Cloud',
-      demoLink: '#',
-      githubLink: '#',
-      featured: true
+      title: 'MovieFlix',
+      description: 'MovieFlix is a React Native app (built with Expo) for exploring and discovering movies. Search for any movie, view details, and get personalized recommendations based on what users are searching for.',
+      image: movieFlix,
+      tags: ['React Native', 'Tailwind CSS', 'TMDb APIs', 'Expo', 'Appwrite'],
+      category: 'Mobile App',
+      demoLink: 'https://expo.dev/preview/update?message=Update+README.md%0A%0AProject+screenshots+add&updateRuntimeVersion=1.0.0&createdAt=2025-09-23T19%3A27%3A38.432Z&slug=exp&projectId=12fff959-e233-4cba-9f13-606cdee39184&group=dd210c46-2c5d-4c53-8053-6e3458f4697e',
+      githubLink: 'https://github.com/hanifjamadar77/MovieFlix',
+      featured: false
     },
     {
       id: 7,
-      title: 'Social Media Analytics',
+      title: 'TextUtils - React App',
       description: 'Real-time social media sentiment analysis and engagement tracking platform with data visualization.',
       image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
       tags: ['React', 'D3.js', 'Python', 'NLP'],
@@ -109,9 +116,15 @@ export default function ProjectsPage() {
     }
   ];
 
-  const filteredProjects = filter === 'All' 
-    ? projects 
-    : projects.filter(project => project.category === filter);
+  const filteredProjects = projects.filter(pro => {
+    const matchesCategory = filter === 'All' || 
+      (Array.isArray(pro.category) 
+        ? pro.category.includes(filter) 
+        : pro.category === filter);
+    const matchesSearch = pro.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         pro.issuer.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 relative overflow-hidden">
@@ -138,14 +151,10 @@ export default function ProjectsPage() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
         {/* Header */}
-        <div className="text-center mb-16 animate-fade-in">
-          <p className="text-blue-400 text-sm uppercase tracking-wider mb-2">Portfolio</p>
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
-            A collection of my major works — <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">blending research</span>
+        <div className="text-center mb-10 animate-fade-in">
+          <h1 className="text-4xl md:text-6xl font-bold font-serif text-white mb-2">
+            A collection of my major works<span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"></span>
           </h1>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            AI innovation, and modern UI design
-          </p>
         </div>
 
         {/* Filter Buttons */}
@@ -197,13 +206,6 @@ export default function ProjectsPage() {
                 <div className={`absolute inset-0 bg-gradient-to-t from-blue-900/90 to-purple-900/90 flex items-center justify-center gap-4 transition-opacity duration-300 ${
                   hoveredProject === project.id ? 'opacity-100' : 'opacity-0'
                 }`}>
-                  <a
-                    href={project.demoLink}
-                    className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300 transform hover:scale-110"
-                    title="Live Demo"
-                  >
-                    <Play size={20} />
-                  </a>
                   <a
                     href={project.githubLink}
                     className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300 transform hover:scale-110"

@@ -27,19 +27,19 @@ export default function HeroProfile() {
   }, []);
 
   const badges = [
-    { label: 'AI Enthusiast', variant: 'blue' },
-    { label: 'Machine Learning Engineer', variant: 'blue' },
-    { label: 'Deep Learning Expert', variant: 'blue' }
+    { label: 'Linux', variant: 'blue' },
+    { label: 'Java Programming', variant: 'blue' },
+    { label: 'Frontend/Backend', variant: 'blue' }
   ];
 
   const roles = [
-    { label: 'Computer Vision Researcher', variant: 'blue' },
-    { label: 'Designer', variant: 'blue' }
+    { label: 'Project Managemant', variant: 'blue' },
+    { label: 'Networking', variant: 'blue' }
   ];
 
   const stats = [
-    { icon: MapPin, label: 'Location', value: 'Bahrain/India' },
-    { icon: Briefcase, label: 'Expertise', value: 'AI/ML Research' },
+    { icon: MapPin, label: 'Location', value: 'Wagholi, Pune' },
+    { icon: Briefcase, label: 'Expertise', value: 'Mobile App Developer' },
     { icon: Award, label: 'Certifications', value: 'Google/AWS/Azure' }
   ];
 
@@ -105,14 +105,14 @@ export default function HeroProfile() {
                 Hi, I'm <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-gradient">{text}</span>
                 <span className="animate-blink text-blue-400">|</span>
               </h1>
-              <p className="text-xl text-gray-400 mb-6">Artificial Intelligence Engineer | Freelance</p>
+              <p className="text-xl text-gray-200 mb-6">Full Stack Mobile and Web Application Developer</p>
               
               {/* Badges */}
               <div className="flex flex-wrap gap-2 justify-center md:justify-start mb-4">
                 {badges.map((badge, idx) => (
                   <span
                     key={idx}
-                    className="px-4 py-1.5 bg-blue-500/20 border border-blue-500/30 text-blue-400 rounded-full text-sm font-medium hover:bg-blue-500/30 transition-all duration-300 transform hover:scale-105"
+                    className="px-4 py-1.5 bg-blue-500/20 border border-blue-500/30 text-blue-400 rounded-full text-md font-medium hover:bg-blue-500/30 transition-all duration-300 transform hover:scale-105"
                     style={{
                       animationDelay: `${idx * 0.1}s`
                     }}
@@ -126,7 +126,7 @@ export default function HeroProfile() {
                 {roles.map((role, idx) => (
                   <span
                     key={idx}
-                    className="px-4 py-1.5 bg-blue-500/20 border border-blue-500/30 text-blue-400 rounded-full text-sm font-medium hover:bg-blue-500/30 transition-all duration-300 transform hover:scale-105"
+                    className="px-4 py-1.5 bg-blue-500/20 border border-blue-500/30 text-blue-400 rounded-full text-md font-medium hover:bg-blue-500/30 transition-all duration-300 transform hover:scale-105"
                   >
                     {role.label}
                   </span>
@@ -146,9 +146,9 @@ export default function HeroProfile() {
                       animationDelay: `${idx * 0.2}s`
                     }}
                   >
-                    <Icon className="w-5 h-5 text-blue-400 mb-2" />
-                    <p className="text-gray-400 text-xs mb-1">{stat.label}</p>
-                    <p className="text-white font-semibold text-sm">{stat.value}</p>
+                    <Icon className="w-6 h-6 text-blue-400 mb-2" />
+                    <p className="text-gray-400 text-sm mb-1">{stat.label}</p>
+                    <p className="text-white font-semibold text-md">{stat.value}</p>
                   </div>
                 );
               })}
@@ -156,7 +156,7 @@ export default function HeroProfile() {
 
             {/* Connect Section */}
             <div>
-              <p className="text-gray-400 text-sm mb-4 uppercase tracking-wider">Connect</p>
+              <p className="text-gray-200 text-sm font-bold mb-4 uppercase tracking-wider">Connect</p>
               <div className="flex gap-4 justify-center md:justify-start">
                 {socialLinks.map((social, idx) => {
                   const Icon = social.icon;
@@ -166,10 +166,10 @@ export default function HeroProfile() {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-12 h-12 bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-lg flex items-center justify-center text-gray-400 hover:text-blue-400 hover:border-blue-500/50 hover:bg-gray-800 transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/20"
+                      className="w-14 h-14 bg-gray-800/60 backdrop-blur-sm border border-gray-700/50 rounded-lg flex items-center justify-center text-gray-400 hover:text-blue-400 hover:border-blue-500/50 hover:bg-gray-800 transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/20"
                       aria-label={social.label}
                     >
-                      <Icon className="w-5 h-5" />
+                      <Icon className="w-6 h-6" />
                     </a>
                   );
                 })}
