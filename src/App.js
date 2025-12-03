@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route, Link, Outlet, HashRouter } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from "./components/Navbar";
 import Home from "./components/Home";
 import Gallery from "./components/Gallery";
@@ -13,21 +13,21 @@ import Certificate from "./components/Certifications";
 function App() {
   return (
     <>
-     <BrowserRouter> 
-     <Header/>
-      {/* Routes */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="gallery" element={<Gallery/>} />
-        <Route path="skills" element={<Skills />} />
-        <Route path="projects" element={<Projects />} />
-        <Route path="resume" element={<Resume />} />
-        <Route path="about" element={<About />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="certificate" element={<Certificate />} />
-        {/* <Route path="skills" element={<Skills />} />   */}
-      </Routes>
-    </BrowserRouter>
+      <BrowserRouter>
+        <Header />
+        {/* Routes */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="gallery" element={<Gallery />} />
+          <Route path="skills" element={<Skills />} />
+          <Route path="projects" element={<Projects />} />
+          <Route path="resume" element={<Resume />} />
+          <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="certificate" element={<Certificate />} />
+          {/* <Route path="skills" element={<Skills />} />   */}
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

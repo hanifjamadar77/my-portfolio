@@ -1,6 +1,6 @@
 // HeroProfile.jsx
 import React, { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, Instagram, MapPin, Briefcase, Award, CodeXml } from 'lucide-react';
+import { Github, Linkedin, Mail, Instagram, MapPin, Briefcase, CodeXml } from 'lucide-react';
 import profile from "../assets/profile.jpg";
 import Navbar from './Navbar';
 
@@ -8,10 +8,10 @@ export default function HeroProfile() {
   const [isVisible, setIsVisible] = useState(false);
   const [text, setText] = useState('');
   const fullName = "Hanif Jamadar";
-  
+
   useEffect(() => {
     setIsVisible(true);
-    
+
     // Typing animation for name
     let i = 0;
     const typing = setInterval(() => {
@@ -22,7 +22,7 @@ export default function HeroProfile() {
         clearInterval(typing);
       }
     }, 100);
-    
+
     return () => clearInterval(typing);
   }, []);
 
@@ -80,7 +80,7 @@ export default function HeroProfile() {
       {/* Main Content - Added pt-20 for navbar spacing */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 py-20 pt-32">
         <div className={`flex flex-col md:flex-row items-center gap-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          
+
           {/* Profile Image */}
           <div className="relative group">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full blur-2xl opacity-50 group-hover:opacity-75 transition-opacity duration-500 animate-pulse"></div>
@@ -106,7 +106,7 @@ export default function HeroProfile() {
                 <span className="animate-blink text-blue-400">|</span>
               </h1>
               <p className="text-xl text-gray-200 mb-6">Full Stack Mobile and Web Application Developer</p>
-              
+
               {/* Badges */}
               <div className="flex flex-wrap gap-2 justify-center md:justify-start mb-4">
                 {badges.map((badge, idx) => (
@@ -121,7 +121,7 @@ export default function HeroProfile() {
                   </span>
                 ))}
               </div>
-              
+
               <div className="flex flex-wrap gap-2 justify-center md:justify-start mb-6">
                 {roles.map((role, idx) => (
                   <span

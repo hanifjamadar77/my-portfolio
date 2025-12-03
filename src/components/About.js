@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { User, GraduationCap, Award, Heart, Code, Briefcase, Target, Lightbulb, BookOpen, Coffee, Zap, TrendingUp } from 'lucide-react';
+import { User, Heart, Target, Lightbulb, TrendingUp } from 'lucide-react';
 
 export default function AboutPage() {
   const [isVisible, setIsVisible] = useState(false);
@@ -36,29 +36,6 @@ export default function AboutPage() {
       title: "Growth",
       description: "Committed to continuous learning and staying ahead in the rapidly evolving tech landscape."
     }
-  ];
-
-  const education = [
-    {
-      degree: "B.Tech in Artificial Intelligence and Data Science",
-      institution: "Gujarat Technological University",
-      period: "2021 - 2025",
-      description: "Specialized in Machine Learning, Deep Learning, and AI applications with focus on real-world problem solving.",
-      achievements: [
-        "CGPA: 9.2/10",
-        "Research in Computer Vision and NLP",
-        "Led multiple AI projects and hackathons"
-      ]
-    }
-  ];
-
-  const interests = [
-    { icon: Code, text: "AI & Machine Learning" },
-    { icon: Briefcase, text: "Building Products" },
-    { icon: BookOpen, text: "Reading Tech Blogs" },
-    { icon: Coffee, text: "Coffee & Coding" },
-    { icon: Award, text: "Competitive Programming" },
-    { icon: Zap, text: "Open Source" }
   ];
 
   return (

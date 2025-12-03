@@ -1,17 +1,13 @@
 import React, { useState } from "react";
 import {
-  FileText,
-  Download,
   Mail,
   Phone,
   MapPin,
   Linkedin,
   Github,
-  Award,
-  Briefcase,
   GraduationCap,
-  Code,
-  ExternalLink,
+  FileText,
+  Download,
 } from "lucide-react";
 import resume from "../assets/Resume.pdf";
 
@@ -314,14 +310,18 @@ export default function ResumePage() {
               <h2 className="text-xl font-bold text-white mb-4">Connect</h2>
               <div className="space-y-3">
                 <a
-                  href="#"
+                  href={`https://${resumeData.linkedin}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-3 text-gray-300 hover:text-blue-400 transition-colors"
                 >
                   <Linkedin className="w-5 h-5" />
                   <span className="text-sm">{resumeData.linkedin}</span>
                 </a>
                 <a
-                  href="#"
+                  href={`https://${resumeData.github}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-3 text-gray-300 hover:text-blue-400 transition-colors"
                 >
                   <Github className="w-5 h-5" />

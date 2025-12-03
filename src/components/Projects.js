@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
-import { ExternalLink, Github} from 'lucide-react';
+import { ExternalLink, Github } from 'lucide-react';
 import workly from '../assets/Workly.jpg';
 import fastFood from '../assets/food.png';
 import blink from '../assets/blink.png';
 import stock from '../assets/stock.png';
 import aero from '../assets/aero.png';
-import movieFlix from '../assets/movieFlix.jpg'; 
+import movieFlix from '../assets/movieFlix.jpg';
 import textUtils from '../assets/textutils.png'
 
 export default function ProjectsPage() {
   const [filter, setFilter] = useState('All');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm] = useState('');
   const [hoveredProject, setHoveredProject] = useState(null);
 
-  const categories = ['All', 'Mobile App',  'AI/ML', 'Web Development', ];
+  const categories = ['All', 'Mobile App', 'AI/ML', 'Web Development',];
 
   const projects = [
     {
@@ -22,7 +22,7 @@ export default function ProjectsPage() {
       description: 'A comprehensive mobile application connecting blue-collar workers with job opportunities in their local area. Built with React Native and Expo.',
       image: workly,
       tags: ['React Native', 'Tailwind CSS', 'Typescript', 'ML', 'AI', 'Gio Location'],
-      category: ['Mobile App','AI/ML'],
+      category: ['Mobile App', 'AI/ML'],
       demoLink: 'https://hanifjamadar77.github.io/workly-APK/',
       githubLink: 'https://github.com/hanifjamadar77/Workly-AI-Powered-Platform-for-Hyper-Local-Micro-Job-Finding-',
       featured: true
@@ -32,7 +32,7 @@ export default function ProjectsPage() {
       title: 'Fast Food App',
       description: 'A modern, full-stack mobile application for food ordering built with React Native (Expo) and powered by Appwrite. This app provides users with seamless browsing of menu items, customizable orders, cart management, and secure authentication — all in one place.',
       image: fastFood,
-      tags: ['React Native', 'Tailwind CSS','Expo', 'Content Filtering'],
+      tags: ['React Native', 'Tailwind CSS', 'Expo', 'Content Filtering'],
       category: ['Mobile App'],
       demoLink: 'https://expo.dev/accounts/hanif_jamadar/projects/Food_Delivery_App',
       githubLink: 'https://github.com/hanifjamadar77/Fast-Food-App',
@@ -55,7 +55,7 @@ export default function ProjectsPage() {
       description: 'This project is a Stock Price Prediction Website built with Python. It uses Streamlit to provide a simple and interactive web interface, and a Machine Learning model implemented in TensorFlow to predict future stock prices based on historical data.',
       image: stock,
       tags: ['Python', 'Streamlit', 'TensorFlow', 'Pandas', 'NumPy', 'Matplotlib'],
-      category: ['Web Development','AI/ML'],
+      category: ['Web Development', 'AI/ML'],
       demoLink: 'https://github.com/hanifjamadar77/Stock-Price-Prediction',
       githubLink: 'https://github.com/hanifjamadar77/Stock-Price-Prediction',
       featured: true
@@ -67,7 +67,7 @@ export default function ProjectsPage() {
       image: aero,
       tags: ['HTML', 'CSS', 'JavaScript', 'Weather APIs'],
       category: 'Web Development',
-      demoLink: 'https://github.com/hanifjamadar77/Aero---The-Weather-App-',
+      demoLink: 'https://hanifjamadar77.github.io/Aero---The-Weather-App-/',
       githubLink: 'https://github.com/hanifjamadar77/Aero---The-Weather-App-',
       featured: false
     },
@@ -96,12 +96,12 @@ export default function ProjectsPage() {
   ];
 
   const filteredProjects = projects.filter(pro => {
-    const matchesCategory = filter === 'All' || 
-      (Array.isArray(pro.category) 
-        ? pro.category.includes(filter) 
+    const matchesCategory = filter === 'All' ||
+      (Array.isArray(pro.category)
+        ? pro.category.includes(filter)
         : pro.category === filter);
     const matchesSearch = pro.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         pro.issuer.toLowerCase().includes(searchTerm.toLowerCase());
+      pro.issuer.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
 
@@ -109,7 +109,7 @@ export default function ProjectsPage() {
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-      
+
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(20)].map((_, i) => (
@@ -142,11 +142,10 @@ export default function ProjectsPage() {
             <button
               key={category}
               onClick={() => setFilter(category)}
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 transform hover:scale-105 ${
-                filter === category
-                  ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg shadow-blue-500/50'
-                  : 'bg-gray-800/50 text-gray-300 border border-gray-700 hover:border-blue-500/50'
-              }`}
+              className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 transform hover:scale-105 ${filter === category
+                ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg shadow-blue-500/50'
+                : 'bg-gray-800/50 text-gray-300 border border-gray-700 hover:border-blue-500/50'
+                }`}
             >
               {category}
             </button>
@@ -180,11 +179,10 @@ export default function ProjectsPage() {
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-80"></div>
-                
+
                 {/* Hover Overlay */}
-                <div className={`absolute inset-0 bg-gradient-to-t from-blue-900/90 to-purple-900/90 flex items-center justify-center gap-4 transition-opacity duration-300 ${
-                  hoveredProject === project.id ? 'opacity-100' : 'opacity-0'
-                }`}>
+                <div className={`absolute inset-0 bg-gradient-to-t from-blue-900/90 to-purple-900/90 flex items-center justify-center gap-4 transition-opacity duration-300 ${hoveredProject === project.id ? 'opacity-100' : 'opacity-0'
+                  }`}>
                   <a
                     href={project.githubLink}
                     className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300 transform hover:scale-110"

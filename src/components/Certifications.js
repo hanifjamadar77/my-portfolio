@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
-import { Award, Calendar, ExternalLink, Filter, Search } from 'lucide-react';
+import { Award } from 'lucide-react';
 
 export default function CertificationsPage() {
-  const [filter, setFilter] = useState('All');
-  const [searchTerm, setSearchTerm] = useState('');
-
-  const categories = ['All', 'Tech', 'AI/ML', 'Web Development', 'Cloud', 'Others'];
+  const [filter] = useState('All');
+  const [searchTerm] = useState('');
 
   const certifications = [
     {
@@ -83,12 +81,12 @@ export default function CertificationsPage() {
   ];
 
   const filteredCertifications = certifications.filter(cert => {
-    const matchesCategory = filter === 'All' || 
-      (Array.isArray(cert.category) 
-        ? cert.category.includes(filter) 
+    const matchesCategory = filter === 'All' ||
+      (Array.isArray(cert.category)
+        ? cert.category.includes(filter)
         : cert.category === filter);
     const matchesSearch = cert.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         cert.issuer.toLowerCase().includes(searchTerm.toLowerCase());
+      cert.issuer.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
 
@@ -200,7 +198,7 @@ export default function CertificationsPage() {
                   {cert.title}
                 </h3>
                 <p className="text-gray-400 text-sm mb-3">{cert.issuer}</p> */}
-{/*                 
+                {/*                 
                 <div className="flex items-center gap-2 text-gray-500 text-sm mb-4">
                   <Calendar className="w-4 h-4" />
                   <span>{cert.date}</span>

@@ -1,25 +1,7 @@
-import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, MessageSquare, Instagram, Facebook } from 'lucide-react';
+import React from 'react';
+import { Mail, Phone, MapPin, Github, Linkedin, Instagram } from 'lucide-react';
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-  const [status, setStatus] = useState('');
-
-  const handleSubmit = () => {
-    if (formData.name && formData.email && formData.message) {
-      setStatus('Message sent successfully! I will get back to you soon.');
-      setFormData({ name: '', email: '', message: '' });
-      setTimeout(() => setStatus(''), 5000);
-    } else {
-      setStatus('Please fill in all fields.');
-      setTimeout(() => setStatus(''), 3000);
-    }
-  };
-
   const contactInfo = [
     {
       icon: Mail,
@@ -102,67 +84,6 @@ export default function ContactPage() {
               );
             })}
           </div>
-
-          {/* Contact Form */}
-          {/* <div className="p-8 pt-4">
-            <div className="space-y-4"> */}
-              {/* Name Input */}
-              {/* <div>
-                <label className="block text-gray-400 text-sm mb-2">Your Name</label>
-                <input
-                  type="text"
-                  placeholder="John Doe"
-                  value={formData.name}
-                  onChange={(e) => setFormData({...formData, name: e.target.value})}
-                  className="w-full px-4 py-3 bg-slate-800/50 border border-gray-700/50 rounded-lg text-white placeholder-gray-500 focus:border-blue-500/50 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
-                />
-              </div> */}
-
-              {/* Email Input */}
-              {/* <div>
-                <label className="block text-gray-400 text-sm mb-2">Your Email</label>
-                <input
-                  type="email"
-                  placeholder="john@example.com"
-                  value={formData.email}
-                  onChange={(e) => setFormData({...formData, email: e.target.value})}
-                  className="w-full px-4 py-3 bg-slate-800/50 border border-gray-700/50 rounded-lg text-white placeholder-gray-500 focus:border-blue-500/50 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
-                />
-              </div> */}
-
-              {/* Message Input */}
-              {/* <div>
-                <label className="block text-gray-400 text-sm mb-2">Your Message</label>
-                <textarea
-                  placeholder="Tell me about your project or just say hi..."
-                  value={formData.message}
-                  onChange={(e) => setFormData({...formData, message: e.target.value})}
-                  rows="5"
-                  className="w-full px-4 py-3 bg-slate-800/50 border border-gray-700/50 rounded-lg text-white placeholder-gray-500 focus:border-blue-500/50 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all duration-300 resize-none"
-                ></textarea>
-              </div> */}
-
-              {/* Submit Button */}
-              {/* <button
-                onClick={handleSubmit}
-                className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white py-3 px-6 rounded-lg font-medium hover:shadow-lg hover:shadow-blue-500/50 transform hover:scale-[1.02] transition-all duration-300 flex items-center justify-center gap-2 group"
-              >
-                <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                Send Message
-              </button> */}
-
-              {/* Status Message */}
-              {/* {status && (
-                <div className={`text-center py-2 px-4 rounded-lg ${
-                  status.includes('successfully') 
-                    ? 'bg-green-500/20 border border-green-500/30 text-green-400' 
-                    : 'bg-red-500/20 border border-red-500/30 text-red-400'
-                }`}>
-                  {status}
-                </div>
-              )} */}
-            {/* </div>
-          </div> */}
 
           {/* Contact Info Footer */}
           <div className="bg-slate-950/50 border-t border-gray-800/50 p-8">
