@@ -1,6 +1,7 @@
 // Navbar.jsx
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,21 +34,21 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <a href="/" className="text-2xl font-bold">
+          <Link to="/" className="text-2xl font-bold">
             <span className="text-blue-400">Hanif</span>
-          </a>
+          </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8 text-sm">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.path}
-                href={item.path}
+                to={item.path}
                 className="text-gray-300 hover:text-blue-400 transition-colors duration-300 relative group"
               >
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 group-hover:w-full transition-all duration-300"></span>
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -64,14 +65,14 @@ export default function Navbar() {
         {isOpen && (
           <div className="md:hidden mt-4 bg-gray-900/95 backdrop-blur-sm rounded-lg border border-gray-800 overflow-hidden animate-slide-down">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.path}
-                href={item.path}
+                to={item.path}
                 onClick={() => setIsOpen(false)}
                 className="block px-4 py-3 text-gray-300 hover:bg-gray-800 hover:text-blue-400 transition-all duration-300 border-b border-gray-800 last:border-b-0"
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </div>
         )}
