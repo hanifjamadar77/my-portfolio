@@ -13,7 +13,7 @@ export default function ContactPage() {
       icon: Phone,
       title: 'Phone',
       value: '+91 8485037484',
-      link: 'tel:+919876543210'
+      link: 'tel:8485037484'
     },
     {
       icon: MapPin,
