@@ -79,7 +79,7 @@ export default function ResumePage() {
         degree: "B.Tech in Computer Engineering",
         institution: "G H Raisoni College of Engineering and Management, Pune",
         period: "2023 - 2026",
-        cgpa: "77.8 (8.53 cgpa)",
+        cgpa: "79 (8.65 cgpa)",
         achievements: [
           "Smart India Hackathon certificate at college level.",
           "Hacktoberfest Jam (Microsoft Learn Student Ambassador Club).",
