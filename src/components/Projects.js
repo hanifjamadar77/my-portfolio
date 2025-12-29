@@ -23,7 +23,7 @@ export default function ProjectsPage() {
       image: workly,
       tags: ['React Native', 'Tailwind CSS', 'Typescript', 'ML', 'AI', 'Gio Location'],
       category: ['Mobile App', 'AI/ML'],
-      demoLink: 'https://hanifjamadar77.github.io/workly-APK/',
+      demoLink: 'https://github.com/hanifjamadar77/Workly-AI-Powered-Platform-for-Hyper-Local-Micro-Job-Finding-/releases',
       githubLink: 'https://github.com/hanifjamadar77/Workly-AI-Powered-Platform-for-Hyper-Local-Micro-Job-Finding-',
       featured: true
     },
