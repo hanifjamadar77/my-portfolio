@@ -180,55 +180,6 @@ export default function ResumePage() {
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
           {/* Left Column */}
           <div className="lg:col-span-2 space-y-8">
-            {/* Projects Section */}
-            {/* <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-8">
-              <div className="flex items-center gap-3 mb-6">
-                <Code className="w-6 h-6 text-blue-400" />
-                <h2 className="text-3xl font-bold text-white">Projects & Experience</h2>
-              </div>
-              <div className="space-y-6">
-                {resumeData.projects.map((project, idx) => (
-                  <div key={idx} className="border-l-2 border-blue-500 pl-6 pb-6 last:pb-0">
-                    <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
-                    <p className="text-gray-400 mb-3">{project.description}</p>
-                    <div className="flex flex-wrap gap-2">
-                      {project.technologies.map((tech, i) => (
-                        <span key={i} className="px-3 py-1 bg-blue-500/10 border border-blue-500/20 text-blue-400 rounded-full text-xs font-medium">
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div> */}
-
-            {/* Experience Section */}
-            {/* <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-8">
-              <div className="flex items-center gap-3 mb-6">
-                <Briefcase className="w-6 h-6 text-blue-400" />
-                <h2 className="text-3xl font-bold text-white">Work Experience</h2>
-              </div>
-              <div className="space-y-6">
-                {resumeData.experience.map((exp, idx) => (
-                  <div key={idx} className="border-l-2 border-purple-500 pl-6 pb-6 last:pb-0">
-                    <h3 className="text-xl font-bold text-white">{exp.title}</h3>
-                    <p className="text-blue-400 mb-2">{exp.company}</p>
-                    <p className="text-gray-500 text-sm mb-3">{exp.period}</p>
-                    <p className="text-gray-400 mb-3">{exp.description}</p>
-                    <ul className="space-y-2">
-                      {exp.responsibilities.map((resp, i) => (
-                        <li key={i} className="text-gray-300 flex items-start">
-                          <span className="text-blue-400 mr-2">•</span>
-                          {resp}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-            </div> */}
-
             {/* Education Section */}
             <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-8">
               <div className="flex items-center gap-3 mb-6">
@@ -267,44 +218,6 @@ export default function ResumePage() {
 
           {/* Right Column - Sidebar */}
           <div className="space-y-8">
-            {/* Skills Section */}
-            {/* <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 sticky top-6">
-              <div className="flex items-center gap-3 mb-6">
-                <Award className="w-6 h-6 text-blue-400" />
-                <h2 className="text-2xl font-bold text-white">Key Skills</h2>
-              </div>
-              <div className="space-y-4">
-                {Object.entries(resumeData.skills).map(([category, skills], idx) => (
-                  <div key={idx}>
-                    <h3 className="text-blue-400 font-semibold mb-2">{category}</h3>
-                    <div className="flex flex-wrap gap-2">
-                      {skills.map((skill, i) => (
-                        <span key={i} className="px-3 py-1 bg-gray-800 text-gray-300 rounded-lg text-sm hover:bg-blue-500/20 hover:text-blue-400 transition-all duration-300">
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div> */}
-
-            {/* Achievements Section */}
-            {/* <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6">
-              <div className="flex items-center gap-3 mb-6">
-                <Award className="w-6 h-6 text-blue-400" />
-                <h2 className="text-2xl font-bold text-white">Achievements</h2>
-              </div>
-              <ul className="space-y-3">
-                {resumeData.achievements.map((achievement, i) => (
-                  <li key={i} className="text-gray-300 flex items-start">
-                    <span className="text-yellow-400 mr-2 mt-1">🏆</span>
-                    <span className="text-sm">{achievement}</span>
-                  </li>
-                ))}
-              </ul>
-            </div> */}
-
             {/* Social Links */}
             <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6">
               <h2 className="text-xl font-bold text-white mb-4">Connect</h2>

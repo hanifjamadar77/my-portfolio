@@ -7,6 +7,8 @@ import stock from '../assets/stock.png';
 import aero from '../assets/aero.png';
 import movieFlix from '../assets/movieFlix.jpg';
 import textUtils from '../assets/textutils.png'
+import auth_s from '../assets/auth_system.png'
+import work from '../assets/worktrack.jpeg'
 
 export default function ProjectsPage() {
   const [filter, setFilter] = useState('All');
@@ -29,17 +31,6 @@ export default function ProjectsPage() {
     },
     {
       id: 2,
-      title: 'Fast Food App',
-      description: 'A modern, full-stack mobile application for food ordering built with React Native (Expo) and powered by Appwrite. This app provides users with seamless browsing of menu items, customizable orders, cart management, and secure authentication — all in one place.',
-      image: fastFood,
-      tags: ['React Native', 'Tailwind CSS', 'Expo', 'Content Filtering'],
-      category: ['Mobile App'],
-      demoLink: 'https://expo.dev/accounts/hanif_jamadar/projects/Food_Delivery_App',
-      githubLink: 'https://github.com/hanifjamadar77/Fast-Food-App',
-      featured: false
-    },
-    {
-      id: 3,
       title: 'BlinkType-Assist ',
       description: 'BlinkType Assist is an assistive typing app for individuals with motor impairments. Using Python, OpenCV, and dlib, it enables hands-free interaction with a virtual keyboard through eye gaze navigation and blinking gestures for text input. Designed to enhance communication and digital interaction.',
       image: blink,
@@ -50,7 +41,30 @@ export default function ProjectsPage() {
       featured: true
     },
     {
+      id: 3,
+      title: 'Fast Food App',
+      description: 'A modern, full-stack mobile application for food ordering built with React Native (Expo) and powered by Appwrite. This app provides users with seamless browsing of menu items, customizable orders, cart management, and secure authentication — all in one place.',
+      image: fastFood,
+      tags: ['React Native', 'Tailwind CSS', 'Expo', 'Content Filtering'],
+      category: ['Mobile App'],
+      demoLink: 'https://expo.dev/accounts/hanif_jamadar/projects/Food_Delivery_App',
+      githubLink: 'https://github.com/hanifjamadar77/Fast-Food-App',
+      featured: false
+    },
+    
+    {
       id: 4,
+      title: 'WorkTrack',
+      description: 'WorkTrack – A mobile app for daily worker attendance tracking with calendar-based status marking, salary calculation, and profile management using React Native + Appwrite backend.',
+      image: work,
+      tags: ['React Native (Expo)', 'TypeScript', 'Appwrite', 'Expo Router', 'React Native Calendars'],
+      category: ['Mobile App'],
+      demoLink: 'https://github.com/hanifjamadar77/WorkTrack/releases',
+      githubLink: 'https://github.com/hanifjamadar77/WorkTrack',
+      featured: true
+    },
+    {
+      id: 5,
       title: 'Stock Price Prediction Using Machine Learning In Python',
       description: 'This project is a Stock Price Prediction Website built with Python. It uses Streamlit to provide a simple and interactive web interface, and a Machine Learning model implemented in TensorFlow to predict future stock prices based on historical data.',
       image: stock,
@@ -60,8 +74,20 @@ export default function ProjectsPage() {
       githubLink: 'https://github.com/hanifjamadar77/Stock-Price-Prediction',
       featured: true
     },
+
     {
-      id: 5,
+      id: 6,
+      title: 'Complete MERN Authentication System ',
+      description: 'Complete MERN Authentication System is a full-stack web application built using MongoDB, Express.js, React.js, and Node.js that implements secure user authentication with real-world production practices. ',
+      image: auth_s,
+      tags: ['React js', 'Tailwind CSS', 'JavaScript', 'Zustand', 'Mailtrap Email API', 'MongoDB '],
+      category: 'Web Development',
+      demoLink: 'https://github.com/hanifjamadar77/Complete-MERN-Authentication-System',
+      githubLink: 'https://github.com/hanifjamadar77/Complete-MERN-Authentication-System',
+      featured: false
+    },
+    {
+      id: 7,
       title: 'Aero - The Weather App',
       description: 'A weather application that provides real-time weather updates for any location. Built with HTML/CSS/JavaScript, the app features a clean, user-friendly interface and displays current weather conditions, temperature, humidity, wind speed. ',
       image: aero,
@@ -72,7 +98,7 @@ export default function ProjectsPage() {
       featured: false
     },
     {
-      id: 6,
+      id: 8,
       title: 'MovieFlix',
       description: 'MovieFlix is a React Native app (built with Expo) for exploring and discovering movies. Search for any movie, view details, and get personalized recommendations based on what users are searching for.',
       image: movieFlix,
@@ -83,7 +109,7 @@ export default function ProjectsPage() {
       featured: false
     },
     {
-      id: 7,
+      id: 9,
       title: 'TextUtils - React App',
       description: 'This is a TextUtils website, Used for text Uppercase, Lowercase, SentanceCase, Removing Extraspaces, counting number of words and charactors etc.',
       image: textUtils,
