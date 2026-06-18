@@ -1,132 +1,213 @@
-import React, { useState } from 'react';
-import { ExternalLink, Github } from 'lucide-react';
-import workly from '../assets/Workly.jpg';
-import fastFood from '../assets/food.png';
-import blink from '../assets/blink.png';
-import stock from '../assets/stock.png';
-import aero from '../assets/aero.png';
-import movieFlix from '../assets/movieFlix.jpg';
-import textUtils from '../assets/textutils.png'
-import auth_s from '../assets/auth_system.png'
-import work from '../assets/worktrack.jpeg'
+import React, { useState } from "react";
+import { ExternalLink, Github } from "lucide-react";
+import workly from "../assets/Workly.jpg";
+import fastFood from "../assets/food.png";
+import blink from "../assets/blink.png";
+import stock from "../assets/stock.png";
+import aero from "../assets/aero.png";
+import movieFlix from "../assets/movieFlix.jpg";
+import textUtils from "../assets/textutils.png";
+import auth_s from "../assets/auth_system.png";
+import work from "../assets/worktrack.jpeg";
+import roomify from "../assets/roomify.png";
 
 export default function ProjectsPage() {
-  const [filter, setFilter] = useState('All');
-  const [searchTerm] = useState('');
+  const [filter, setFilter] = useState("All");
+  const [searchTerm] = useState("");
   const [hoveredProject, setHoveredProject] = useState(null);
 
-  const categories = ['All', 'Mobile App', 'AI/ML', 'Web Development',];
+  const categories = ["All", "Mobile App", "AI/ML", "Web Development"];
 
   const projects = [
     {
       id: 1,
-      title: 'Workly: AI Powered Platform For Hyper Local Micro Job Finding',
-      description: 'A comprehensive mobile application connecting blue-collar workers with job opportunities in their local area. Built with React Native and Expo.',
+      title: "Workly: AI Powered Platform For Hyper Local Micro Job Finding",
+      description:
+        "A comprehensive mobile application connecting blue-collar workers with job opportunities in their local area. Built with React Native and Expo.",
       image: workly,
-      tags: ['React Native', 'Tailwind CSS', 'Typescript', 'ML', 'AI', 'Gio Location'],
-      category: ['Mobile App', 'AI/ML'],
-      demoLink: 'https://github.com/hanifjamadar77/Workly-AI-Powered-Platform-for-Hyper-Local-Micro-Job-Finding-/releases',
-      githubLink: 'https://github.com/hanifjamadar77/Workly-AI-Powered-Platform-for-Hyper-Local-Micro-Job-Finding-',
-      featured: true
+      tags: [
+        "React Native",
+        "Tailwind CSS",
+        "Typescript",
+        "ML",
+        "AI",
+        "Gio Location",
+      ],
+      category: ["Mobile App", "AI/ML"],
+      demoLink:
+        "https://github.com/hanifjamadar77/Workly-AI-Powered-Platform-for-Hyper-Local-Micro-Job-Finding-/releases",
+      githubLink:
+        "https://github.com/hanifjamadar77/Workly-AI-Powered-Platform-for-Hyper-Local-Micro-Job-Finding-",
+      featured: true,
     },
     {
       id: 2,
-      title: 'BlinkType-Assist ',
-      description: 'BlinkType Assist is an assistive typing app for individuals with motor impairments. Using Python, OpenCV, and dlib, it enables hands-free interaction with a virtual keyboard through eye gaze navigation and blinking gestures for text input. Designed to enhance communication and digital interaction.',
+      title: "BlinkType-Assist ",
+      description:
+        "BlinkType Assist is an assistive typing app for individuals with motor impairments. Using Python, OpenCV, and dlib, it enables hands-free interaction with a virtual keyboard through eye gaze navigation and blinking gestures for text input. Designed to enhance communication and digital interaction.",
       image: blink,
-      tags: ['Python', 'OpenCV', 'dlib', 'Facial Landmark Predictor'],
-      category: ['AI/ML'],
-      demoLink: 'https://github.com/hanifjamadar77/BlinkType-Assist',
-      githubLink: 'https://github.com/hanifjamadar77/BlinkType-Assist',
-      featured: true
-    },
-    {
-      id: 3,
-      title: 'Fast Food App',
-      description: 'A modern, full-stack mobile application for food ordering built with React Native (Expo) and powered by Appwrite. This app provides users with seamless browsing of menu items, customizable orders, cart management, and secure authentication — all in one place.',
-      image: fastFood,
-      tags: ['React Native', 'Tailwind CSS', 'Expo', 'Content Filtering'],
-      category: ['Mobile App'],
-      demoLink: 'https://expo.dev/accounts/hanif_jamadar/projects/Food_Delivery_App',
-      githubLink: 'https://github.com/hanifjamadar77/Fast-Food-App',
-      featured: false
-    },
-    
-    {
-      id: 4,
-      title: 'WorkTrack',
-      description: 'WorkTrack – A mobile app for daily worker attendance tracking with calendar-based status marking, salary calculation, and profile management using React Native + Appwrite backend.',
-      image: work,
-      tags: ['React Native (Expo)', 'TypeScript', 'Appwrite', 'Expo Router', 'React Native Calendars'],
-      category: ['Mobile App'],
-      demoLink: 'https://github.com/hanifjamadar77/WorkTrack/releases',
-      githubLink: 'https://github.com/hanifjamadar77/WorkTrack',
-      featured: true
-    },
-    {
-      id: 5,
-      title: 'Stock Price Prediction Using Machine Learning In Python',
-      description: 'This project is a Stock Price Prediction Website built with Python. It uses Streamlit to provide a simple and interactive web interface, and a Machine Learning model implemented in TensorFlow to predict future stock prices based on historical data.',
-      image: stock,
-      tags: ['Python', 'Streamlit', 'TensorFlow', 'Pandas', 'NumPy', 'Matplotlib'],
-      category: ['Web Development', 'AI/ML'],
-      demoLink: 'https://github.com/hanifjamadar77/Stock-Price-Prediction',
-      githubLink: 'https://github.com/hanifjamadar77/Stock-Price-Prediction',
-      featured: true
+      tags: ["Python", "OpenCV", "dlib", "Facial Landmark Predictor"],
+      category: ["AI/ML"],
+      demoLink: "https://github.com/hanifjamadar77/BlinkType-Assist",
+      githubLink: "https://github.com/hanifjamadar77/BlinkType-Assist",
+      featured: true,
     },
 
     {
-      id: 6,
-      title: 'Complete MERN Authentication System ',
-      description: 'Complete MERN Authentication System is a full-stack web application built using MongoDB, Express.js, React.js, and Node.js that implements secure user authentication with real-world production practices. ',
-      image: auth_s,
-      tags: ['React js', 'Tailwind CSS', 'JavaScript', 'Zustand', 'Mailtrap Email API', 'MongoDB '],
-      category: 'Web Development',
-      demoLink: 'https://github.com/hanifjamadar77/Complete-MERN-Authentication-System',
-      githubLink: 'https://github.com/hanifjamadar77/Complete-MERN-Authentication-System',
-      featured: false
+      id: 3,
+      title: "Roomify - 2D to 3D Floor Plan Visualizer",
+      description:
+        "Roomify is an AI-powered floor plan visualization platform that enables architects, homeowners, and designers to convert 2D floor plans into photorealistic 3D room layouts. The application features secure authentication, drag-and-drop file uploads, cloud storage integration, project management, and an interactive before-and-after comparison tool for seamless visualization of design transformations.",
+      image: roomify,
+      tags: [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Tailwind CSS",
+        "Puter Auth",
+        "Puter Cloud Storage",
+        "AI Visualization",
+      ],
+      category: ["Web Development", "AI/ML"],
+      demoLink: "https://github.com/hanifjamadar77/Roomify",
+      githubLink: "https://github.com/hanifjamadar77/Roomify",
+      featured: true,
     },
+
+    {
+      id: 4,
+      title: "Fast Food App",
+      description:
+        "A modern, full-stack mobile application for food ordering built with React Native (Expo) and powered by Appwrite. This app provides users with seamless browsing of menu items, customizable orders, cart management, and secure authentication — all in one place.",
+      image: fastFood,
+      tags: ["React Native", "Tailwind CSS", "Expo", "Content Filtering"],
+      category: ["Mobile App"],
+      demoLink:
+        "https://expo.dev/accounts/hanif_jamadar/projects/Food_Delivery_App",
+      githubLink: "https://github.com/hanifjamadar77/Fast-Food-App",
+      featured: false,
+    },
+
+    {
+      id: 5,
+      title: "WorkTrack",
+      description:
+        "WorkTrack – A mobile app for daily worker attendance tracking with calendar-based status marking, salary calculation, and profile management using React Native + Appwrite backend.",
+      image: work,
+      tags: [
+        "React Native (Expo)",
+        "TypeScript",
+        "Appwrite",
+        "Expo Router",
+        "React Native Calendars",
+      ],
+      category: ["Mobile App"],
+      demoLink: "https://github.com/hanifjamadar77/WorkTrack/releases",
+      githubLink: "https://github.com/hanifjamadar77/WorkTrack",
+      featured: true,
+    },
+    {
+      id: 6,
+      title: "Stock Price Prediction Using Machine Learning In Python",
+      description:
+        "This project is a Stock Price Prediction Website built with Python. It uses Streamlit to provide a simple and interactive web interface, and a Machine Learning model implemented in TensorFlow to predict future stock prices based on historical data.",
+      image: stock,
+      tags: [
+        "Python",
+        "Streamlit",
+        "TensorFlow",
+        "Pandas",
+        "NumPy",
+        "Matplotlib",
+      ],
+      category: ["Web Development", "AI/ML"],
+      demoLink: "https://github.com/hanifjamadar77/Stock-Price-Prediction",
+      githubLink: "https://github.com/hanifjamadar77/Stock-Price-Prediction",
+      featured: true,
+    },
+
     {
       id: 7,
-      title: 'Aero - The Weather App',
-      description: 'A weather application that provides real-time weather updates for any location. Built with HTML/CSS/JavaScript, the app features a clean, user-friendly interface and displays current weather conditions, temperature, humidity, wind speed. ',
-      image: aero,
-      tags: ['HTML', 'CSS', 'JavaScript', 'Weather APIs'],
-      category: 'Web Development',
-      demoLink: 'https://hanifjamadar77.github.io/Aero---The-Weather-App-/',
-      githubLink: 'https://github.com/hanifjamadar77/Aero---The-Weather-App-',
-      featured: false
+      title: "Fast Food App",
+      description:
+        "A modern, full-stack mobile application for food ordering built with React Native (Expo) and powered by Appwrite. This app provides users with seamless browsing of menu items, customizable orders, cart management, and secure authentication — all in one place.",
+      image: fastFood,
+      tags: ["React Native", "Tailwind CSS", "Expo", "Content Filtering"],
+      category: ["Mobile App"],
+      demoLink:
+        "https://expo.dev/accounts/hanif_jamadar/projects/Food_Delivery_App",
+      githubLink: "https://github.com/hanifjamadar77/Fast-Food-App",
+      featured: false,
     },
+
     {
       id: 8,
-      title: 'MovieFlix',
-      description: 'MovieFlix is a React Native app (built with Expo) for exploring and discovering movies. Search for any movie, view details, and get personalized recommendations based on what users are searching for.',
-      image: movieFlix,
-      tags: ['React Native', 'Tailwind CSS', 'TMDb APIs', 'Expo', 'Appwrite'],
-      category: 'Mobile App',
-      demoLink: 'https://expo.dev/preview/update?message=Update+README.md%0A%0AProject+screenshots+add&updateRuntimeVersion=1.0.0&createdAt=2025-09-23T19%3A27%3A38.432Z&slug=exp&projectId=12fff959-e233-4cba-9f13-606cdee39184&group=dd210c46-2c5d-4c53-8053-6e3458f4697e',
-      githubLink: 'https://github.com/hanifjamadar77/MovieFlix',
-      featured: false
+      title: "Complete MERN Authentication System ",
+      description:
+        "Complete MERN Authentication System is a full-stack web application built using MongoDB, Express.js, React.js, and Node.js that implements secure user authentication with real-world production practices. ",
+      image: auth_s,
+      tags: [
+        "React js",
+        "Tailwind CSS",
+        "JavaScript",
+        "Zustand",
+        "Mailtrap Email API",
+        "MongoDB ",
+      ],
+      category: "Web Development",
+      demoLink:
+        "https://github.com/hanifjamadar77/Complete-MERN-Authentication-System",
+      githubLink:
+        "https://github.com/hanifjamadar77/Complete-MERN-Authentication-System",
+      featured: false,
     },
     {
       id: 9,
-      title: 'TextUtils - React App',
-      description: 'This is a TextUtils website, Used for text Uppercase, Lowercase, SentanceCase, Removing Extraspaces, counting number of words and charactors etc.',
+      title: "Aero - The Weather App",
+      description:
+        "A weather application that provides real-time weather updates for any location. Built with HTML/CSS/JavaScript, the app features a clean, user-friendly interface and displays current weather conditions, temperature, humidity, wind speed. ",
+      image: aero,
+      tags: ["HTML", "CSS", "JavaScript", "Weather APIs"],
+      category: "Web Development",
+      demoLink: "https://hanifjamadar77.github.io/Aero---The-Weather-App-/",
+      githubLink: "https://github.com/hanifjamadar77/Aero---The-Weather-App-",
+      featured: false,
+    },
+    {
+      id: 10,
+      title: "MovieFlix",
+      description:
+        "MovieFlix is a React Native app (built with Expo) for exploring and discovering movies. Search for any movie, view details, and get personalized recommendations based on what users are searching for.",
+      image: movieFlix,
+      tags: ["React Native", "Tailwind CSS", "TMDb APIs", "Expo", "Appwrite"],
+      category: "Mobile App",
+      demoLink:
+        "https://expo.dev/preview/update?message=Update+README.md%0A%0AProject+screenshots+add&updateRuntimeVersion=1.0.0&createdAt=2025-09-23T19%3A27%3A38.432Z&slug=exp&projectId=12fff959-e233-4cba-9f13-606cdee39184&group=dd210c46-2c5d-4c53-8053-6e3458f4697e",
+      githubLink: "https://github.com/hanifjamadar77/MovieFlix",
+      featured: false,
+    },
+    {
+      id: 11,
+      title: "TextUtils - React App",
+      description:
+        "This is a TextUtils website, Used for text Uppercase, Lowercase, SentanceCase, Removing Extraspaces, counting number of words and charactors etc.",
       image: textUtils,
-      tags: ['React', 'JavaScript', 'CSS', 'HTML'],
-      category: 'Web Development',
-      demoLink: 'https://hanifjamadar77.github.io/TextUtils-React-App/',
-      githubLink: 'https://github.com/hanifjamadar77/TextUtils-React-App',
-      featured: false
+      tags: ["React", "JavaScript", "CSS", "HTML"],
+      category: "Web Development",
+      demoLink: "https://hanifjamadar77.github.io/TextUtils-React-App/",
+      githubLink: "https://github.com/hanifjamadar77/TextUtils-React-App",
+      featured: false,
     },
   ];
 
-  const filteredProjects = projects.filter(pro => {
-    const matchesCategory = filter === 'All' ||
+  const filteredProjects = projects.filter((pro) => {
+    const matchesCategory =
+      filter === "All" ||
       (Array.isArray(pro.category)
         ? pro.category.includes(filter)
         : pro.category === filter);
-    const matchesSearch = pro.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const matchesSearch =
+      pro.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       pro.issuer.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
@@ -143,12 +224,12 @@ export default function ProjectsPage() {
             key={i}
             className="absolute bg-blue-500/10 rounded-full animate-float"
             style={{
-              width: Math.random() * 100 + 50 + 'px',
-              height: Math.random() * 100 + 50 + 'px',
-              top: Math.random() * 100 + '%',
-              left: Math.random() * 100 + '%',
-              animationDelay: Math.random() * 5 + 's',
-              animationDuration: Math.random() * 10 + 10 + 's'
+              width: Math.random() * 100 + 50 + "px",
+              height: Math.random() * 100 + 50 + "px",
+              top: Math.random() * 100 + "%",
+              left: Math.random() * 100 + "%",
+              animationDelay: Math.random() * 5 + "s",
+              animationDuration: Math.random() * 10 + 10 + "s",
             }}
           />
         ))}
@@ -158,7 +239,8 @@ export default function ProjectsPage() {
         {/* Header */}
         <div className="text-center mb-10 animate-fade-in">
           <h1 className="text-4xl md:text-6xl font-bold font-serif text-white mb-2">
-            A collection of my major works<span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"></span>
+            A collection of my major works
+            <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"></span>
           </h1>
         </div>
 
@@ -168,10 +250,11 @@ export default function ProjectsPage() {
             <button
               key={category}
               onClick={() => setFilter(category)}
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 transform hover:scale-105 ${filter === category
-                ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg shadow-blue-500/50'
-                : 'bg-gray-800/50 text-gray-300 border border-gray-700 hover:border-blue-500/50'
-                }`}
+              className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 transform hover:scale-105 ${
+                filter === category
+                  ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg shadow-blue-500/50"
+                  : "bg-gray-800/50 text-gray-300 border border-gray-700 hover:border-blue-500/50"
+              }`}
             >
               {category}
             </button>
@@ -185,7 +268,7 @@ export default function ProjectsPage() {
               key={project.id}
               className="group relative bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/20 transform hover:-translate-y-2"
               style={{
-                animationDelay: `${idx * 0.1}s`
+                animationDelay: `${idx * 0.1}s`,
               }}
               onMouseEnter={() => setHoveredProject(project.id)}
               onMouseLeave={() => setHoveredProject(null)}
@@ -207,8 +290,11 @@ export default function ProjectsPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-80"></div>
 
                 {/* Hover Overlay */}
-                <div className={`absolute inset-0 bg-gradient-to-t from-blue-900/90 to-purple-900/90 flex items-center justify-center gap-4 transition-opacity duration-300 ${hoveredProject === project.id ? 'opacity-100' : 'opacity-0'
-                  }`}>
+                <div
+                  className={`absolute inset-0 bg-gradient-to-t from-blue-900/90 to-purple-900/90 flex items-center justify-center gap-4 transition-opacity duration-300 ${
+                    hoveredProject === project.id ? "opacity-100" : "opacity-0"
+                  }`}
+                >
                   <a
                     href={project.githubLink}
                     className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300 transform hover:scale-110"
@@ -272,7 +358,9 @@ export default function ProjectsPage() {
         {/* No Projects Message */}
         {filteredProjects.length === 0 && (
           <div className="text-center py-20">
-            <p className="text-gray-400 text-lg">No projects found in this category.</p>
+            <p className="text-gray-400 text-lg">
+              No projects found in this category.
+            </p>
           </div>
         )}
 
@@ -283,7 +371,8 @@ export default function ProjectsPage() {
               Interested in collaborating?
             </h3>
             <p className="text-gray-400 mb-6 max-w-xl">
-              I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+              I'm always open to discussing new projects, creative ideas, or
+              opportunities to be part of your vision.
             </p>
             <a
               href="contact"
