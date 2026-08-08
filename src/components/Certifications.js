@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import { Award, Search, Calendar, ExternalLink } from 'lucide-react';
 import navot from '../assets/certificates_logo/navot.png';
+import nptel from '../assets/certificates_logo/nptel.png';
+import ieee from '../assets/certificates_logo/ieee.jpg';
+import iitb from '../assets/certificates_logo/iit.jpg';
+import infosys from '../assets/certificates_logo/infosys.jpg';
+import ibm from '../assets/certificates_logo/ibm.jpg';
+import mkcl from '../assets/certificates_logo/mscit.jpg';
 
 export default function CertificationsPage() {
   const [filter, setFilter] = useState('All');
@@ -17,63 +23,7 @@ export default function CertificationsPage() {
   'Soft Skills'];
 
   const certifications = [
-{
-    title: "Advanced C++ Programming",
-    issuer: "IIT Bombay",
-    date: "2024",
-    category: ["Programming", "C++"],
-    certificateUrl: "https://drive.google.com/file/d/1FpCjAL51yaSfWU5x1Tn4_hQtoQhiLRN8/view?usp=drive_link",
-    image: "https://i.pinimg.com/736x/2b/0a/85/2b0a85acbf4c9364ea3f9408a5acd4d8.jpg"
-  },
-  {
-    title: "Python Training",
-    issuer: "IIT Bombay",
-    date: "2024",
-    category: ["Python", "Programming"],
-    certificateUrl: "https://drive.google.com/file/d/13m5L9ncU4hC3RmpQ1FonwDZjVRtYJxjr/view?usp=drive_link",
-    image: "https://i.pinimg.com/736x/2b/0a/85/2b0a85acbf4c9364ea3f9408a5acd4d8.jpg"
-  },
-  {
-    title: "CSS3 Certification",
-    issuer: "Infosys Springboard",
-    date: "2025",
-    category: ["Web Development", "Frontend"],
-    certificateUrl: "https://drive.google.com/file/d/1KkObwB_u2zKEZpeuHSyuX24mU9_TlkZ7/view?usp=drive_link",
-    image: "https://i.pinimg.com/1200x/89/0c/25/890c250fe129488a586b1a99e8b68107.jpg"
-  },
-  {
-    title: "Data Science Certification",
-    issuer: "IBM",
-    date: "2024",
-    category: ["Data Science", "AI/ML"],
-    certificateUrl: "https://drive.google.com/file/d/1q2LCcWVF8LtrtqxpSR3DvXirDp_Tp_0G/view?usp=drive_link",
-    image: "https://i.pinimg.com/1200x/4a/65/fe/4a65feaa4e6c3b03534bb838ac2e9ed6.jpg"
-  },
-  {
-    title: "Machine Learning Certification",
-    issuer: "IBM",
-    date: "2024",
-    category: ["AI/ML", "Machine Learning"],
-    certificateUrl: "https://drive.google.com/file/d/1emW_JoNaKynWf7cjnUvjE6F-XBpAvsJo/view?usp=drive_link",
-    image: "https://i.pinimg.com/1200x/4a/65/fe/4a65feaa4e6c3b03534bb838ac2e9ed6.jpg"
-  },
-  {
-    title: "Enhancing Soft Skills & Personality",
-    issuer: "NPTEL",
-    date: "2025",
-    category: ["Soft Skills", "Professional Development"],
-    certificateUrl: "https://drive.google.com/file/d/1Gq3dmNC0tQIa-49_O3xt4ey9PK3kTFMv/view?usp=drive_link",
-    image: "https://i.pinimg.com/1200x/d5/32/43/d532432642f7466c4bc60bcdb46845d8.jpg"
-  },
-  {
-    title: "Internet of Things",
-    issuer: "NPTEL",
-    date: "2026",
-    category: ["IoT", "Technology"],
-    certificateUrl: "https://drive.google.com/file/d/1IN5Xr66u_dwqOGAQf4aVDxIOmjI3Tksv/view?usp=drive_link",
-    image: "https://i.pinimg.com/1200x/d5/32/43/d532432642f7466c4bc60bcdb46845d8.jpg"
-  },
-  {
+    {
     title: "Full Stack Developer Internship",
     issuer: "Navotkarsha IT Solutions Pvt. Ltd.",
     date: "June 2026",
@@ -81,13 +31,53 @@ export default function CertificationsPage() {
     certificateUrl: "https://drive.google.com/file/d/1ARdVksSCJGQpZDAY8SmyZNsR-guy5e_h/view?usp=drive_link",
     image: navot
   },
-  {
+   {
     title: "IEEE Conference Participation",
     issuer: "IEEE",
     date: "2026",
     category: ["Research", "Conference"],
     certificateUrl: "https://drive.google.com/file/d/1Qdij1mnio_tvqYU1QUtqlcw2RI5T-0Uq/view?usp=drive_link",
-    image: "https://i.pinimg.com/736x/ea/99/dd/ea99ddcd4c897258adc39b0d958398ff.jpg"
+    image: ieee
+  },
+{
+    title: "Advanced C++ Programming",
+    issuer: "IIT Bombay",
+    date: "2024",
+    category: ["Programming", "C++"],
+    certificateUrl: "https://drive.google.com/file/d/1FpCjAL51yaSfWU5x1Tn4_hQtoQhiLRN8/view?usp=drive_link",
+    image: iitb
+  },
+  {
+    title: "Python Training",
+    issuer: "IIT Bombay",
+    date: "2024",
+    category: ["Python", "Programming"],
+    certificateUrl: "https://drive.google.com/file/d/13m5L9ncU4hC3RmpQ1FonwDZjVRtYJxjr/view?usp=drive_link",
+    image: iitb
+  },
+  {
+    title: "CSS3 Certification",
+    issuer: "Infosys Springboard",
+    date: "2025",
+    category: ["Web Development", "Frontend"],
+    certificateUrl: "https://drive.google.com/file/d/1KkObwB_u2zKEZpeuHSyuX24mU9_TlkZ7/view?usp=drive_link",
+    image: infosys
+  },
+  {
+    title: "Data Science Certification",
+    issuer: "IBM",
+    date: "2024",
+    category: ["Data Science", "AI/ML"],
+    certificateUrl: "https://drive.google.com/file/d/1q2LCcWVF8LtrtqxpSR3DvXirDp_Tp_0G/view?usp=drive_link",
+    image: ibm
+  },
+  {
+    title: "Machine Learning Certification",
+    issuer: "IBM",
+    date: "2024",
+    category: ["AI/ML", "Machine Learning"],
+    certificateUrl: "https://drive.google.com/file/d/1emW_JoNaKynWf7cjnUvjE6F-XBpAvsJo/view?usp=drive_link",
+    image: ibm
   },
   {
     title: "Smart India Hackathon",
@@ -98,12 +88,28 @@ export default function CertificationsPage() {
     image: "https://i.pinimg.com/1200x/0b/23/7f/0b237fe3cafbbe0fabb298373f27fc10.jpg"
   },
   {
+    title: "Internet of Things",
+    issuer: "NPTEL",
+    date: "2026",
+    category: ["IoT", "Technology"],
+    certificateUrl: "https://drive.google.com/file/d/1IN5Xr66u_dwqOGAQf4aVDxIOmjI3Tksv/view?usp=drive_link",
+    image: nptel
+  },
+  {
+    title: "Enhancing Soft Skills & Personality",
+    issuer: "NPTEL",
+    date: "2025",
+    category: ["Soft Skills", "Professional Development"],
+    certificateUrl: "https://drive.google.com/file/d/1Gq3dmNC0tQIa-49_O3xt4ey9PK3kTFMv/view?usp=drive_link",
+    image: nptel
+  },
+  {
     title: "MS-CIT",
     issuer: "MKCL",
     date: "2021",
     category: ["Computer Fundamentals", "IT"],
     certificateUrl: "https://drive.google.com/file/d/1MQa1zfgp6lEUDBZs62y0iD0x_QLnRqXQ/view?usp=drive_link",
-    image: "https://i.pinimg.com/1200x/b3/34/3f/b3343f788822ad0eeeea4ba81e819bd7.jpg"
+    image: mkcl
   }
   ];
 
