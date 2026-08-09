@@ -9,6 +9,7 @@ import {
   Briefcase,
   FileText,
   Download,
+  Instagram,
 } from "lucide-react";
 import resume from "../assets/Resume.pdf";
 
@@ -23,6 +24,7 @@ export default function ResumePage() {
     phone: "+91 8485037484",
     linkedin: "linkedin.com/in/hanif-jamadar",
     github: "github.com/hanifjamadar77",
+    insta : "instagram.com/iamhanif._/",
     summary:
       "Quick summary below and full resume preview with download option.",
 
@@ -258,6 +260,15 @@ export default function ResumePage() {
                 >
                   <Github className="w-5 h-5" />
                   <span className="text-sm">{resumeData.github}</span>
+                </a>
+                <a
+                  href={`https://www.${resumeData.insta}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-gray-300 hover:text-blue-400 transition-colors"
+                >
+                  <Instagram className="w-5 h-5" />
+                  <span className="text-sm">{resumeData.insta}</span>
                 </a>
               </div>
             </div>
