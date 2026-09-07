@@ -10,6 +10,7 @@ import textUtils from "../assets/textutils.png";
 import auth_s from "../assets/auth_system.png";
 import work from "../assets/worktrack.jpeg";
 import roomify from "../assets/roomify.png";
+import devpilot from "../assets/devpilot.png";
 
 export default function ProjectsPage() {
   const [filter, setFilter] = useState("All");
@@ -31,7 +32,7 @@ export default function ProjectsPage() {
         "Typescript",
         "ML",
         "AI",
-        "Gio Location",
+        "Google Location",
       ],
       category: ["Mobile App", "AI/ML"],
       demoLink:
@@ -42,6 +43,27 @@ export default function ProjectsPage() {
     },
     {
       id: 2,
+      title: "DevPilot – AI-Powered GitHub Repository Assistant",
+      description:
+        "DevPilot is an AI-powered GitHub Repository Assistant that helps developers understand their codebases more efficiently. Users can connect GitHub repositories, index source code, and ask AI-powered questions to get intelligent, context-aware responses.",
+      image: devpilot,
+      tags: [
+        "Next js",
+        "Spring Boot",
+        "Typescript",
+        "GitHub OAuth2",
+        "AI",
+        "Docker",
+      ],
+      category: ["Web Development", "AI/ML"],
+      demoLink:
+        "https://github.com/hanifjamadar77/DevPilot-AI-Powered-GitHub-Repository-Assistant",
+      githubLink:
+        "https://github.com/hanifjamadar77/DevPilot-AI-Powered-GitHub-Repository-Assistant",
+      featured: true,
+    },
+    {
+      id: 3,
       title: "BlinkType-Assist ",
       description:
         "BlinkType Assist is an assistive typing app for individuals with motor impairments. Using Python, OpenCV, and dlib, it enables hands-free interaction with a virtual keyboard through eye gaze navigation and blinking gestures for text input. Designed to enhance communication and digital interaction.",
@@ -54,7 +76,7 @@ export default function ProjectsPage() {
     },
 
     {
-      id: 3,
+      id: 4,
       title: "Roomify - 2D to 3D Floor Plan Visualizer",
       description:
         "Roomify is an AI-powered floor plan visualization platform that enables architects, homeowners, and designers to convert 2D floor plans into photorealistic 3D room layouts. The application features secure authentication, drag-and-drop file uploads, cloud storage integration, project management, and an interactive before-and-after comparison tool for seamless visualization of design transformations.",
@@ -75,7 +97,7 @@ export default function ProjectsPage() {
     },
 
     {
-      id: 4,
+      id: 5,
       title: "Fast Food App",
       description:
         "A modern, full-stack mobile application for food ordering built with React Native (Expo) and powered by Appwrite. This app provides users with seamless browsing of menu items, customizable orders, cart management, and secure authentication — all in one place.",
@@ -89,7 +111,7 @@ export default function ProjectsPage() {
     },
 
     {
-      id: 5,
+      id: 6,
       title: "WorkTrack",
       description:
         "WorkTrack – A mobile app for daily worker attendance tracking with calendar-based status marking, salary calculation, and profile management using React Native + Appwrite backend.",
@@ -107,7 +129,7 @@ export default function ProjectsPage() {
       featured: true,
     },
     {
-      id: 6,
+      id: 7,
       title: "Stock Price Prediction Using Machine Learning In Python",
       description:
         "This project is a Stock Price Prediction Website built with Python. It uses Streamlit to provide a simple and interactive web interface, and a Machine Learning model implemented in TensorFlow to predict future stock prices based on historical data.",
@@ -127,7 +149,7 @@ export default function ProjectsPage() {
     },
 
     {
-      id: 7,
+      id: 8,
       title: "Fast Food App",
       description:
         "A modern, full-stack mobile application for food ordering built with React Native (Expo) and powered by Appwrite. This app provides users with seamless browsing of menu items, customizable orders, cart management, and secure authentication — all in one place.",
@@ -141,7 +163,7 @@ export default function ProjectsPage() {
     },
 
     {
-      id: 8,
+      id: 9,
       title: "Complete MERN Authentication System ",
       description:
         "Complete MERN Authentication System is a full-stack web application built using MongoDB, Express.js, React.js, and Node.js that implements secure user authentication with real-world production practices. ",
@@ -162,7 +184,7 @@ export default function ProjectsPage() {
       featured: false,
     },
     {
-      id: 9,
+      id: 10,
       title: "Aero - The Weather App",
       description:
         "A weather application that provides real-time weather updates for any location. Built with HTML/CSS/JavaScript, the app features a clean, user-friendly interface and displays current weather conditions, temperature, humidity, wind speed. ",
@@ -174,7 +196,7 @@ export default function ProjectsPage() {
       featured: false,
     },
     {
-      id: 10,
+      id: 11,
       title: "MovieFlix",
       description:
         "MovieFlix is a React Native app (built with Expo) for exploring and discovering movies. Search for any movie, view details, and get personalized recommendations based on what users are searching for.",
@@ -187,7 +209,7 @@ export default function ProjectsPage() {
       featured: false,
     },
     {
-      id: 11,
+      id: 12,
       title: "TextUtils - React App",
       description:
         "This is a TextUtils website, Used for text Uppercase, Lowercase, SentanceCase, Removing Extraspaces, counting number of words and charactors etc.",
